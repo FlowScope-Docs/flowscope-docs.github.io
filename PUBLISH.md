@@ -1,23 +1,23 @@
-# Publish — FlowScope org + GitHub Pages
+# Publish — FlowScope-Docs org + GitHub Pages
 
 Canonical site URL:
 
-`https://flowscope.github.io/`
+`https://flowscope-docs.github.io/`
 
-Repo: `https://github.com/FlowScope/flowscope.github.io`
+Repo: `https://github.com/FlowScope-Docs/flowscope-docs.github.io`
 
 Local folder name stays `FlowScope-Guidebook`; only the GitHub org/repo name is branded.
 
 ## First-time setup (you do this once)
 
-1. On GitHub, create organization **`FlowScope`** (if the name is taken, use `FlowScope-Docs` and replace URLs below with `https://flowscope-docs.github.io/`).
-2. In that org, create an empty **public** repository named **`flowscope.github.io`** (no README / license / gitignore if this folder already has commits).
+1. On GitHub, create organization **`FlowScope-Docs`**.
+2. In that org, create an empty **public** repository named **`flowscope-docs.github.io`** (no README / license / gitignore if this folder already has commits).
 3. From this folder:
 
 ```powershell
 git branch -M main
 git remote remove origin 2>$null
-git remote add origin https://github.com/FlowScope/flowscope.github.io.git
+git remote add origin https://github.com/FlowScope-Docs/flowscope-docs.github.io.git
 git push -u origin main
 ```
 
@@ -25,7 +25,7 @@ git push -u origin main
    - Source: **Deploy from a branch**
    - Branch: `main` / `/ (root)`
    - Save
-5. Wait 1–2 minutes, then open `https://flowscope.github.io/`
+5. Wait 1–2 minutes, then open `https://flowscope-docs.github.io/`
 
 Docsify serves `index.html` from the repo root. `.nojekyll` is present (do not enable Jekyll).
 
@@ -49,4 +49,4 @@ Open the printed URL; Docsify loads from `index.html` with `theme.css`.
 
 ## App link
 
-FlowScope navbar Guidebook icon defaults to `https://flowscope.github.io/` (`NEXT_PUBLIC_GUIDEBOOK_URL` can override).
+FlowScope navbar Guidebook icon defaults to `https://flowscope-docs.github.io/` (`NEXT_PUBLIC_GUIDEBOOK_URL` can override).

@@ -81,4 +81,4 @@ There is no separate “job author” product role — Editors write and instrum
 | **Acknowledge** | Editor+ marks a missed slot or closes a stuck `running` execution |
 | **WIB** | Asia/Jakarta wall-clock timezone |
 
-<p class="muted-note">Site: <a href="https://flowscope.github.io/">flowscope.github.io</a> · Screenshots: see <a href="#/assets/README">assets</a> (most still pending).</p>
+<p class="muted-note">Site: <a href="https://flowscope-docs.github.io/">flowscope-docs.github.io</a> · Screenshots: see <a href="#/assets/README">assets</a> (most still pending).</p>
