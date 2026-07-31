@@ -1,6 +1,5 @@
 # 08  -  Schedule standards
 
-**Status:** Pass 3  
 **Who:** Editor, Admin, Owner
 
 ---
@@ -51,7 +50,7 @@ All schedule UI times are **WIB (Asia/Jakarta)**.
 6. **Save draft**.
 7. Open Monitor → Timeline and verify expected bars appear for that job.
 
-_Screenshot pending - `assets/node-form-schedule-multi.png`: Multi run-times for a daily job._
+<p class="shot-pending">Screenshot pending — assets/node-form-schedule-multi.png: Multi run-times for a daily job</p>
 
 ### Configure a dependent job
 
@@ -68,7 +67,7 @@ _Screenshot pending - `assets/node-form-schedule-multi.png`: Multi run-times for
 3. Remember: expected/missed bars use a **20-minute minimum** visual width; dependents on unmet upstream slots start ~20m after the upstream expected time (not after the 30m miss window); real runs use actual duration.
 4. Soft refresh keeps bars visible while data reloads.
 
-_Screenshot pending - `assets/monitor-timeline-live.png`: Expected vs actual bars for scheduled jobs._
+<p class="shot-pending">Screenshot pending — assets/monitor-timeline-live.png: Expected vs actual bars for scheduled jobs</p>
 
 ## Form / field standards
 
@@ -92,3 +91,8 @@ _Screenshot pending - `assets/monitor-timeline-live.png`: Expected vs actual bar
 - [07  -  Edges and lineage](07-editor-edges-and-lineage.md)
 - [03 - Monitor](03-monitor.md)
 - [10 - Acknowledge](10-editor-acknowledge.md)
+
+<div class="chapter-nav">
+<a href="#/">← Home</a>
+<a href="#/09-editor-job-monitoring">Next: Job monitoring →</a>
+</div>

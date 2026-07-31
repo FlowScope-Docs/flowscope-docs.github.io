@@ -1,6 +1,5 @@
 # 13 - FAQ and troubleshooting
 
-**Status:** Pass 4  
 **Who:** Everyone
 
 ---
@@ -115,3 +114,7 @@ N/A
 - [10 - Acknowledge](10-editor-acknowledge.md)
 - [11 - Admin](11-admin.md)
 - [12  -  Standards and playbooks](12-standards-and-use-cases.md)
+
+<div class="chapter-nav">
+<a href="#/">← Home</a>
+</div>

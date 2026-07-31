@@ -1,6 +1,5 @@
 # 00  -  What is FlowScope
 
-**Status:** Pass 2  
 **Who:** Everyone
 
 ---
@@ -54,8 +53,7 @@ Editors are also **job authors**: they own both the graph and the monitoring pay
 
 ## Step by step
 
-1. Open the guidebook [README](README.md) and pick your **reading path** (Viewer / Editor / Admin).
-2. Continue with [01 - Getting started](01-getting-started.md).
+Go straight to [Getting started](01-getting-started.md).
 
 
 
@@ -65,7 +63,7 @@ N/A
 
 ## Screenshot
 
-_Screenshot pending - `assets/workspace-chrome.png`: Workspace after login with Monitor as the default view._
+<p class="shot-pending">Screenshot pending — assets/workspace-chrome.png: Workspace after login with Monitor as the default view</p>
 
 ## Edge cases
 
@@ -79,4 +77,9 @@ _Screenshot pending - `assets/workspace-chrome.png`: Workspace after login with 
 - [01 - Getting started](01-getting-started.md)
 - [02 - Roles and permissions](02-roles-and-permissions.md)
 - [09 - Job monitoring](09-editor-job-monitoring.md) (Editors instrumenting CML jobs)
+
+<div class="chapter-nav">
+<a href="#/">← Home</a>
+<a href="#/01-getting-started">Next: Getting started →</a>
+</div>
 

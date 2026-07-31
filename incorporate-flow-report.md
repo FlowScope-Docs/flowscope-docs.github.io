@@ -380,3 +380,8 @@ except Exception as e:
 9. Important live prints have a matching report event (or are intentionally skipped per the do-not-mirror list)
 
 Remind the owner: set `cml_job_id` and/or `BACKDATE_*` for adhoc/backdate runs.
+
+<div class="chapter-nav">
+<a href="#/">← Home</a>
+<a href="#/10-editor-acknowledge">Next: Acknowledge →</a>
+</div>

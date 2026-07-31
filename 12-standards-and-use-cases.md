@@ -1,6 +1,5 @@
 # 12  -  Standards and use cases
 
-**Status:** Pass 4  
 **Who:** Everyone (Editors own most conventions)
 
 ---
@@ -124,3 +123,8 @@ N/A  -  use screenshots in feature chapters.
 - [09 - Job monitoring](09-editor-job-monitoring.md)
 - [10 - Acknowledge](10-editor-acknowledge.md)
 - [13 - FAQ](13-faq-and-troubleshooting.md)
+
+<div class="chapter-nav">
+<a href="#/">← Home</a>
+<a href="#/13-faq-and-troubleshooting">Next: FAQ →</a>
+</div>

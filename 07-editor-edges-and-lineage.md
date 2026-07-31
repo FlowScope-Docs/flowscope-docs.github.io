@@ -1,6 +1,5 @@
 # 07  -  Edges and lineage
 
-**Status:** Pass 3  
 **Who:** Editor, Admin, Owner
 
 ---
@@ -56,9 +55,9 @@ Editors, Admins, Owners.
 2. Prerequisite / dependent jobs highlight separately when schedule deps exist.
 3. `job_dependency` edges show in context (selection/hover), not always as a permanent full overlay.
 
-_Screenshot pending - `assets/node-form-depends-on.png`: Depends-on picker (schedule dependency)._
+<p class="shot-pending">Screenshot pending — assets/node-form-depends-on.png: Depends-on picker (schedule dependency)</p>
 
-_Screenshot pending - `assets/chart-search-detail.png`: Chart highlighting for selected node lineage._
+<p class="shot-pending">Screenshot pending — assets/chart-search-detail.png: Chart highlighting for selected node lineage</p>
 
 ## Form / field standards
 
@@ -80,3 +79,8 @@ _Screenshot pending - `assets/chart-search-detail.png`: Chart highlighting for s
 - [06  -  Node forms](06-editor-node-forms.md)
 - [08  -  Schedule standards](08-editor-schedule-standards.md)
 - [03 - Monitor](03-monitor.md) (dependency row order)
+
+<div class="chapter-nav">
+<a href="#/">← Home</a>
+<a href="#/08-editor-schedule-standards">Next: Schedule standards →</a>
+</div>

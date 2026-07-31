@@ -1,0 +1,336 @@
+/* FlowScope guidebook — matches app canvas / accent tokens */
+
+:root {
+  --fs-canvas: #071219;
+  --fs-panel: #0d1c27;
+  --fs-panel-alt: #112736;
+  --fs-line: #1d3a4d;
+  --fs-text: #e9f4f7;
+  --fs-muted: #9bb4c0;
+  --fs-accent: #3ba7c3;
+  --fs-accent-soft: #173949;
+  --fs-warning: #f0ad4e;
+  --fs-success: #57b67d;
+  --fs-danger: #ef6f6c;
+  --fs-radius: 1rem;
+  --sidebar-width: 280px;
+  --theme-color: var(--fs-accent);
+}
+
+html,
+body,
+body:before {
+  background: var(--fs-canvas) !important;
+  color: var(--fs-text);
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(59, 167, 195, 0.12), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(240, 173, 78, 0.1), transparent 28%),
+    var(--fs-canvas) !important;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+/* Override Docsify vue light chrome */
+.sidebar,
+.sidebar ul,
+.sidebar ul li,
+.content,
+.markdown-section,
+main {
+  background-color: transparent !important;
+}
+
+.sidebar {
+  background: rgba(13, 28, 39, 0.96) !important;
+}
+
+/* Docsify chrome */
+.sidebar {
+  background: rgba(13, 28, 39, 0.96);
+  border-right: 1px solid rgba(29, 58, 77, 0.95);
+  color: var(--fs-muted);
+}
+
+.sidebar .app-name {
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  color: var(--fs-text);
+  border-bottom: 1px solid var(--fs-line);
+}
+
+.sidebar ul li a {
+  color: var(--fs-muted);
+  border-radius: 0.5rem;
+  margin: 0 0.4rem;
+}
+
+.sidebar ul li.active > a,
+.sidebar ul li a:hover {
+  color: var(--fs-text);
+  background: var(--fs-accent-soft);
+}
+
+.sidebar-nav > ul > li > p {
+  margin: 1rem 0.75rem 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fs-accent);
+}
+
+.search {
+  margin: 0 !important;
+  padding: 0.75rem !important;
+  border-bottom: 1px solid var(--fs-line) !important;
+}
+
+.search input {
+  background: var(--fs-panel-alt) !important;
+  border: 1px solid var(--fs-line) !important;
+  color: var(--fs-text) !important;
+  border-radius: 0.75rem !important;
+}
+
+.search .matching-post {
+  border-bottom-color: var(--fs-line) !important;
+}
+
+.search h2,
+.search .search-keyword {
+  color: var(--fs-accent) !important;
+}
+
+.sidebar-toggle {
+  background: transparent !important;
+}
+
+.sidebar-toggle span {
+  background-color: var(--fs-muted) !important;
+}
+
+main {
+  background: transparent;
+}
+
+.content {
+  padding-top: 1.5rem;
+}
+
+.markdown-section {
+  max-width: 52rem;
+  color: var(--fs-text);
+}
+
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3 {
+  color: var(--fs-text);
+  font-weight: 650;
+}
+
+.markdown-section h1 {
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.markdown-section h2 {
+  margin-top: 2rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--fs-line);
+}
+
+.markdown-section a {
+  color: var(--fs-accent);
+}
+
+.markdown-section a:hover {
+  color: #6ec4d8;
+}
+
+.markdown-section p,
+.markdown-section li {
+  color: #d5e6ec;
+  line-height: 1.65;
+}
+
+.markdown-section strong {
+  color: var(--fs-text);
+}
+
+.markdown-section code {
+  background: var(--fs-panel-alt);
+  border: 1px solid rgba(29, 58, 77, 0.8);
+  color: #b8e6f2;
+  border-radius: 0.35rem;
+  padding: 0.1rem 0.35rem;
+}
+
+.markdown-section pre {
+  background: var(--fs-panel) !important;
+  border: 1px solid var(--fs-line);
+  border-radius: var(--fs-radius);
+  box-shadow: 0 18px 45px rgba(4, 14, 20, 0.24);
+}
+
+.markdown-section pre > code {
+  background: transparent;
+  border: none;
+  color: #dceef4;
+}
+
+.markdown-section table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--fs-line);
+  border-radius: var(--fs-radius);
+  overflow: hidden;
+}
+
+.markdown-section tr {
+  border-top: 1px solid var(--fs-line);
+}
+
+.markdown-section th,
+.markdown-section td {
+  border: none;
+  border-right: 1px solid var(--fs-line);
+  padding: 0.65rem 0.85rem;
+  background: transparent;
+}
+
+.markdown-section th {
+  background: var(--fs-panel-alt);
+  color: var(--fs-text);
+}
+
+.markdown-section td {
+  background: rgba(13, 28, 39, 0.55);
+}
+
+.markdown-section blockquote {
+  border-left: 3px solid var(--fs-accent);
+  background: rgba(23, 57, 73, 0.45);
+  color: var(--fs-muted);
+  border-radius: 0 0.75rem 0.75rem 0;
+  padding: 0.75rem 1rem;
+}
+
+.markdown-section hr {
+  border: none;
+  border-top: 1px solid var(--fs-line);
+}
+
+/* Home role / task cards */
+.role-grid,
+.task-list {
+  display: grid;
+  gap: 0.85rem;
+  margin: 1.25rem 0 1.75rem;
+}
+
+.role-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.role-card,
+.task-list a {
+  display: block;
+  border: 1px solid var(--fs-line);
+  background: rgba(13, 28, 39, 0.88);
+  border-radius: 1.25rem;
+  padding: 1rem 1.1rem;
+  text-decoration: none !important;
+  box-shadow: 0 18px 45px rgba(4, 14, 20, 0.18);
+  transition: border-color 120ms ease, background 120ms ease;
+}
+
+.role-card:hover,
+.task-list a:hover {
+  border-color: rgba(59, 167, 195, 0.65);
+  background: var(--fs-accent-soft);
+}
+
+.role-card h3 {
+  margin: 0 0 0.4rem !important;
+  border: none !important;
+  color: var(--fs-text) !important;
+  font-size: 1.05rem !important;
+}
+
+.role-card p,
+.task-list a {
+  color: var(--fs-muted) !important;
+  margin: 0 !important;
+}
+
+.task-list a strong {
+  color: var(--fs-text);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.chapter-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--fs-line);
+  font-size: 0.95rem;
+}
+
+.chapter-nav a {
+  border: 1px solid var(--fs-line);
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  background: rgba(17, 39, 54, 0.7);
+  text-decoration: none !important;
+}
+
+.chapter-nav a:hover {
+  border-color: rgba(59, 167, 195, 0.65);
+}
+
+.shot-pending {
+  margin: 0.75rem 0 1rem !important;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.65rem;
+  border: 1px dashed rgba(29, 58, 77, 0.95);
+  background: rgba(7, 18, 25, 0.55);
+  color: var(--fs-muted) !important;
+  font-size: 0.85rem;
+  font-style: normal !important;
+}
+
+.who-line {
+  color: var(--fs-muted);
+  margin-top: -0.35rem !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.pitch {
+  font-size: 1.1rem;
+  color: #d5e6ec;
+  max-width: 40rem;
+}
+
+.muted-note {
+  color: var(--fs-muted);
+  font-size: 0.9rem;
+}
+
+/* Cover / home brand */
+.brand-kicker {
+  display: inline-block;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--fs-accent);
+  margin-bottom: 0.5rem;
+}

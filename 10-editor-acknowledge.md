@@ -1,6 +1,5 @@
 # 10 - Acknowledge missed / stuck runs
 
-**Status:** Pass 3  
 **Who:** Editor, Admin, Owner
 
 ---
@@ -37,7 +36,7 @@ Team escalation rules: TBD in [12](12-standards-and-use-cases.md).
 
 You can also acknowledge some mapped missed cases from the execution panel where the UI offers it.
 
-_Screenshot pending - `assets/monitor-ack-missed.png`: Missed-run acknowledge form on schedule-run Overview._
+<p class="shot-pending">Screenshot pending — assets/monitor-ack-missed.png: Missed-run acknowledge form on schedule-run Overview</p>
 
 ### Close a stuck running execution
 
@@ -49,7 +48,7 @@ _Screenshot pending - `assets/monitor-ack-missed.png`: Missed-run acknowledge fo
 4. Submit. FlowScope writes a manual FINISHED/FAILED event and stores an acknowledgment audit card (read-only afterward).
 5. A second attempt returns **409**  -  do not retry as a “fix”; refresh and read the audit card.
 
-_Screenshot pending - `assets/monitor-ack-running.png`: Stuck running acknowledge (Failed / Succeeded)._
+<p class="shot-pending">Screenshot pending — assets/monitor-ack-running.png: Stuck running acknowledge (Failed / Succeeded)</p>
 
 ## Form / field standards
 
@@ -78,3 +77,8 @@ _Screenshot pending - `assets/monitor-ack-running.png`: Stuck running acknowledg
 - [03 - Monitor](03-monitor.md)
 - [09 - Job monitoring](09-editor-job-monitoring.md)
 - [12  -  Standards / playbooks](12-standards-and-use-cases.md)
+
+<div class="chapter-nav">
+<a href="#/">← Home</a>
+<a href="#/11-admin">Next: Admin →</a>
+</div>

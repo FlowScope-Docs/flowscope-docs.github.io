@@ -1,6 +1,5 @@
 # 05  -  Draft workflow and History
 
-**Status:** Pass 3  
 **Who:** Editor, Admin, Owner
 
 ---
@@ -47,7 +46,7 @@ Saves use incremental graph sync under the hood. You do not choose sync vs full 
 5. Confirm the dialog  -  especially if you have an unsaved draft (restore would overwrite it by loading the restored snapshot as the new current state).
 6. Restore **creates a new revision**; history is append-only (nothing is deleted from the list).
 
-_Screenshot pending - `assets/history-restore.png`: History list with restore confirmation._
+<p class="shot-pending">Screenshot pending — assets/history-restore.png: History list with restore confirmation</p>
 
 ## Form / field standards
 
@@ -65,3 +64,8 @@ N/A  -  use Save/Revert/Refresh deliberately; do not leave dirty drafts overnigh
 - [06  -  Node forms](06-editor-node-forms.md)
 - [04  -  Chart and Table](04-chart-and-table.md)
 - [13 - FAQ](13-faq-and-troubleshooting.md)
+
+<div class="chapter-nav">
+<a href="#/">← Home</a>
+<a href="#/06-editor-node-forms">Next: Node forms →</a>
+</div>

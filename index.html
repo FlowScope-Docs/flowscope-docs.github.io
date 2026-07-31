@@ -7,18 +7,22 @@
   <meta name="description" content="FlowScope coworker guidebook — ETL lineage and CML job monitoring" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
+  <link rel="stylesheet" href="theme.css" />
 </head>
 <body>
   <div id="app">Loading…</div>
   <script>
     window.$docsify = {
-      name: "FlowScope Guidebook",
-      repo: "PhoenixZ33/FlowScope-Guidebook",
+      name: "FlowScope",
+      repo: "FlowScope/flowscope.github.io",
       loadSidebar: true,
       subMaxLevel: 2,
       auto2top: true,
       homepage: "README.md",
-      search: "auto",
+      search: {
+        placeholder: "Search the guidebook",
+        noData: "No results",
+      },
     };
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>

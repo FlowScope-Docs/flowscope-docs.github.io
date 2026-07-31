@@ -1,6 +1,5 @@
 # 02 - Roles and permissions
 
-**Status:** Pass 2  
 **Who:** Everyone
 
 ---
@@ -72,3 +71,8 @@ No dedicated screenshot. Role differences show up as missing History / Edit / Ad
 - [09 - Job monitoring](09-editor-job-monitoring.md) (Editor job-author duties)
 - [10 - Acknowledge](10-editor-acknowledge.md)
 - [11 - Admin](11-admin.md)
+
+<div class="chapter-nav">
+<a href="#/">← Home</a>
+<a href="#/03-monitor">Next: Monitor →</a>
+</div>

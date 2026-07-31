@@ -1,6 +1,5 @@
 # 11 - Admin
 
-**Status:** Pass 4  
 **Who:** Admin, Owner
 
 ---
@@ -32,7 +31,7 @@ Manage who can use the shared FlowScope workspace: approve access requests, invi
 3. **Approve**  -  choose role **viewer**, **editor**, or **admin**, then confirm. The user can open Monitor/Chart/Table on next load.
 4. **Reject**  -  confirm. The user may submit a new request later.
 
-_Screenshot pending - `assets/admin-pending-requests.png`: Pending access requests._
+<p class="shot-pending">Screenshot pending — assets/admin-pending-requests.png: Pending access requests</p>
 
 ### Invite a member
 
@@ -41,7 +40,7 @@ _Screenshot pending - `assets/admin-pending-requests.png`: Pending access reques
 3. Choose role: **viewer**, **editor**, or **admin**.
 4. Submit. You **cannot** assign **Owner** via invite.
 
-_Screenshot pending - `assets/admin-users.png`: Admin users list and invite._
+<p class="shot-pending">Screenshot pending — assets/admin-users.png: Admin users list and invite</p>
 
 ### Change role or remove a member
 
@@ -76,3 +75,8 @@ Role meanings: [02 - Roles and permissions](02-roles-and-permissions.md).
 
 - [01 - Getting started](01-getting-started.md)
 - [02 - Roles and permissions](02-roles-and-permissions.md)
+
+<div class="chapter-nav">
+<a href="#/">← Home</a>
+<a href="#/12-standards-and-use-cases">Next: Standards and use cases →</a>
+</div>

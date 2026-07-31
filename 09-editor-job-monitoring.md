@@ -1,6 +1,5 @@
 # 09 - Job monitoring (CML + Telegram)
 
-**Status:** Pass 3  
 **Who:** Editor, Admin, Owner (= job authors)
 
 ---
@@ -129,3 +128,8 @@ Snippets, anti-patterns, and the full verification list: [Incorporate Flow Repor
 - [06 - Node forms](06-editor-node-forms.md)
 - [10 - Acknowledge](10-editor-acknowledge.md)
 - [13 - FAQ](13-faq-and-troubleshooting.md)
+
+<div class="chapter-nav">
+<a href="#/">← Home</a>
+<a href="#/incorporate-flow-report">Next: Incorporate Flow Report →</a>
+</div>

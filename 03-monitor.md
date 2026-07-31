@@ -1,6 +1,5 @@
 # 03 - Monitor
 
-**Status:** Pass 2  
 **Who:** Everyone (acknowledge and Telegram tab: Editor+)
 
 ---
@@ -41,9 +40,9 @@ All times in the table and timeline axis are **WIB (Asia/Jakarta)** unless noted
 
 **Not available yet:** choosing 5s / 10s / 60s intervals  -  only on/off at 30s.
 
-_Screenshot pending - `assets/monitor-table-overview.png`: Monitor table with summary strip._
+<p class="shot-pending">Screenshot pending — assets/monitor-table-overview.png: Monitor table with summary strip</p>
 
-_Screenshot pending - `assets/monitor-filters.png`: Monitor filters (status, search, job, execution)._
+<p class="shot-pending">Screenshot pending — assets/monitor-filters.png: Monitor filters (status, search, job, execution)</p>
 
 **Important:** Clicking a **row** opens the detail sidebar only. It does **not** fill the Execution filter or write `?execution=` in the URL. To pin an execution in the filter, type it (or use a deep link).
 
@@ -60,11 +59,11 @@ Unmapped runs show the CML job id and **No lineage link**  -  an Editor must fix
    - **View on Timeline**  -  Timeline sub-view with that job row focused
 6. Close with Esc, the X control, or click outside.
 
-_Screenshot pending - `assets/monitor-execution-overview.png`: Execution detail Overview tab._
+<p class="shot-pending">Screenshot pending — assets/monitor-execution-overview.png: Execution detail Overview tab</p>
 
-_Screenshot pending - `assets/monitor-execution-events.png`: Execution Events timeline._
+<p class="shot-pending">Screenshot pending — assets/monitor-execution-events.png: Execution Events timeline</p>
 
-_Screenshot pending - `assets/monitor-open-runtime.png`: Engine ID and Open runtime link._
+<p class="shot-pending">Screenshot pending — assets/monitor-open-runtime.png: Engine ID and Open runtime link</p>
 
 Editor+ acknowledge for stuck `running` lives on Overview  -  see [10 - Acknowledge](10-editor-acknowledge.md).
 
@@ -80,11 +79,11 @@ Editor+ acknowledge for stuck `running` lives on Overview  -  see [10 - Acknowle
 6. Job rows are ordered by explicit schedule **Depends on** (`job_dependency`), upstream first  -  not by data-lineage edges.
 7. While data refreshes, bars usually stay visible (soft refresh); the controls area may show a background refresh state.
 
-_Screenshot pending - `assets/monitor-timeline-live.png`: Timeline Live mode with NOW line._
+<p class="shot-pending">Screenshot pending — assets/monitor-timeline-live.png: Timeline Live mode with NOW line</p>
 
-_Screenshot pending - `assets/monitor-timeline-history.png`: Timeline History mode with date picker._
+<p class="shot-pending">Screenshot pending — assets/monitor-timeline-history.png: Timeline History mode with date picker</p>
 
-_Screenshot pending - `assets/monitor-zoom-legend.png`: Zoom control and bar-state legend._
+<p class="shot-pending">Screenshot pending — assets/monitor-zoom-legend.png: Zoom control and bar-state legend</p>
 
 ### Open schedule-run or job detail from the timeline
 
@@ -93,7 +92,7 @@ _Screenshot pending - `assets/monitor-zoom-legend.png`: Zoom control and bar-sta
 3. Click the **job name** in the left label column → job-level panel even if the row has no bars in the window.
 4. Use **Open lineage** from the panel header when the job is mapped.
 
-_Screenshot pending - `assets/monitor-schedule-run-panel.png`: Schedule-run detail sidebar._
+<p class="shot-pending">Screenshot pending — assets/monitor-schedule-run-panel.png: Schedule-run detail sidebar</p>
 
 Missed-run acknowledge and the “running bridge” to the execution panel: [10 - Acknowledge](10-editor-acknowledge.md).
 
@@ -134,3 +133,8 @@ Acknowledge form fields are documented in [10](10-editor-acknowledge.md).
 - [09 - Job monitoring](09-editor-job-monitoring.md)
 - [10 - Acknowledge](10-editor-acknowledge.md)
 - [13 - FAQ](13-faq-and-troubleshooting.md)
+
+<div class="chapter-nav">
+<a href="#/">← Home</a>
+<a href="#/04-chart-and-table">Next: Chart and Table →</a>
+</div>

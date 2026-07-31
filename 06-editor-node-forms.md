@@ -1,6 +1,5 @@
 # 06  -  Node forms
 
-**Status:** Pass 3  
 **Who:** Editor, Admin, Owner
 
 ---
@@ -34,7 +33,7 @@ Sidebar section order (job-like nodes):
 
 One field per row (full width). Detail panel uses the same section order for read-only view.
 
-_Screenshot pending - `assets/node-form-sections.png`: Node form showing section order (Identity through Impact)._
+<p class="shot-pending">Screenshot pending — assets/node-form-sections.png: Node form showing section order (Identity through Impact)</p>
 
 ### `link` vs `link2`
 
@@ -149,9 +148,9 @@ Link to the report; lineage from upstream datasets/jobs.
 | Depends on | Only when frequency is **dependent** |
 | Failure impact | Fill when the job matters for incidents |
 
-_Screenshot pending - `assets/node-form-schedule-multi.png`: Multi run-times (WIB) for a timed job._
+<p class="shot-pending">Screenshot pending — assets/node-form-schedule-multi.png: Multi run-times (WIB) for a timed job</p>
 
-_Screenshot pending - `assets/node-form-depends-on.png`: Dependent job Depends-on picker._
+<p class="shot-pending">Screenshot pending — assets/node-form-depends-on.png: Dependent job Depends-on picker</p>
 
 ## Edge cases
 
@@ -165,3 +164,8 @@ _Screenshot pending - `assets/node-form-depends-on.png`: Dependent job Depends-o
 - [08  -  Schedule standards](08-editor-schedule-standards.md)
 - [09 - Job monitoring](09-editor-job-monitoring.md)
 - [12  -  Standards](12-standards-and-use-cases.md)
+
+<div class="chapter-nav">
+<a href="#/">← Home</a>
+<a href="#/07-editor-edges-and-lineage">Next: Edges and lineage →</a>
+</div>

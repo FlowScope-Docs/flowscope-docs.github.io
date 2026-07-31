@@ -1,6 +1,5 @@
 # 01 - Getting started
 
-**Status:** Pass 2  
 **Who:** Everyone
 
 ---
@@ -39,7 +38,7 @@ Anyone with a FlowScope login. Membership is separate from sign-in: you must be 
 
 Pending: you wait with a timestamp; you still cannot open Monitor/Chart/Table.
 
-_Screenshot pending - `assets/access-request.png`: Access request panel for signed-in non-members._
+<p class="shot-pending">Screenshot pending — assets/access-request.png: Access request panel for signed-in non-members</p>
 
 ### Orient in the workspace
 
@@ -49,7 +48,7 @@ _Screenshot pending - `assets/access-request.png`: Access request panel for sign
 4. Drag sidebar edges to resize; widths and visibility are remembered in the browser (`localStorage`). Double-click a drag handle to reset width where available.
 5. Admins open user management at **`/admin/users`** (not a workspace view tab).
 
-_Screenshot pending - `assets/workspace-chrome.png`: Navbar, view switcher, and status area._
+<p class="shot-pending">Screenshot pending — assets/workspace-chrome.png: Navbar, view switcher, and status area</p>
 
 ## Form / field standards
 
@@ -69,3 +68,8 @@ _Screenshot pending - `assets/workspace-chrome.png`: Navbar, view switcher, and 
 - [03 - Monitor](03-monitor.md)
 - [11 - Admin](11-admin.md)
 - [13 - FAQ](13-faq-and-troubleshooting.md)
+
+<div class="chapter-nav">
+<a href="#/">← Home</a>
+<a href="#/02-roles-and-permissions">Next: Roles and permissions →</a>
+</div>

@@ -1,6 +1,5 @@
 # 04  -  Chart and Table
 
-**Status:** Pass 2  
 **Who:** Everyone (Edit tab and Monitor split: Editor+)
 
 ---
@@ -44,9 +43,9 @@
 
 If Editors see **graph warnings** (orphan/invalid edges), fix them in Edit before relying on the graph ([05](05-editor-draft-and-history.md), [07](07-editor-edges-and-lineage.md)).
 
-_Screenshot pending - `assets/chart-canvas.png`: Chart canvas with MiniMap._
+<p class="shot-pending">Screenshot pending — assets/chart-canvas.png: Chart canvas with MiniMap</p>
 
-_Screenshot pending - `assets/chart-search-detail.png`: Search sidebar and detail panel._
+<p class="shot-pending">Screenshot pending — assets/chart-search-detail.png: Search sidebar and detail panel</p>
 
 ### Read the Detail panel
 
@@ -84,9 +83,9 @@ Click upstream/downstream/dependent chips to navigate.
 
 Empty mode and “no results for filters” messages are separate; clear filters if the list looks wrong.
 
-_Screenshot pending - `assets/table-mode-filters.png`: Table mode picker with filters._
+<p class="shot-pending">Screenshot pending — assets/table-mode-filters.png: Table mode picker with filters</p>
 
-_Screenshot pending - `assets/table-export.png`: CSV / XLSX export control._
+<p class="shot-pending">Screenshot pending — assets/table-export.png: CSV / XLSX export control</p>
 
 ### Open Monitor for a job (Editor+)
 
@@ -98,7 +97,7 @@ On job-type nodes in the Chart/Table sidebar:
 
 This clears Chart `node` selection params in favor of Monitor `job` + `monitorView` ([README deep links](README.md#deep-link-cheat-sheet)).
 
-_Screenshot pending - `assets/editor-monitor-split.png`: Monitor split control on a job node (Timeline / Table)._
+<p class="shot-pending">Screenshot pending — assets/editor-monitor-split.png: Monitor split control on a job node (Timeline / Table)</p>
 
 Viewers do not edit; they still use Detail, Chart navigation, and Table export.
 
@@ -125,3 +124,8 @@ Viewers do not edit; they still use Detail, Chart navigation, and Table export.
 - [06  -  Node forms](06-editor-node-forms.md)
 - [07  -  Edges and lineage](07-editor-edges-and-lineage.md)
 - [12  -  Standards](12-standards-and-use-cases.md)
+
+<div class="chapter-nav">
+<a href="#/">← Home</a>
+<a href="#/05-editor-draft-and-history">Next: Draft and History →</a>
+</div>
