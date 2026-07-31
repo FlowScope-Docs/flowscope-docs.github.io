@@ -225,55 +225,6 @@ main {
   border-top: 1px solid var(--fs-line);
 }
 
-/* Home role / task cards */
-.role-grid,
-.task-list {
-  display: grid;
-  gap: 0.85rem;
-  margin: 1.25rem 0 1.75rem;
-}
-
-.role-grid {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
-.role-card,
-.task-list a {
-  display: block;
-  border: 1px solid var(--fs-line);
-  background: rgba(13, 28, 39, 0.88);
-  border-radius: 1.25rem;
-  padding: 1rem 1.1rem;
-  text-decoration: none !important;
-  box-shadow: 0 18px 45px rgba(4, 14, 20, 0.18);
-  transition: border-color 120ms ease, background 120ms ease;
-}
-
-.role-card:hover,
-.task-list a:hover {
-  border-color: rgba(59, 167, 195, 0.65);
-  background: var(--fs-accent-soft);
-}
-
-.role-card h3 {
-  margin: 0 0 0.4rem !important;
-  border: none !important;
-  color: var(--fs-text) !important;
-  font-size: 1.05rem !important;
-}
-
-.role-card p,
-.task-list a {
-  color: var(--fs-muted) !important;
-  margin: 0 !important;
-}
-
-.task-list a strong {
-  color: var(--fs-text);
-  display: block;
-  margin-bottom: 0.2rem;
-}
-
 .chapter-nav {
   display: flex;
   flex-wrap: wrap;
@@ -308,29 +259,7 @@ main {
   font-style: normal !important;
 }
 
-.who-line {
-  color: var(--fs-muted);
-  margin-top: -0.35rem !important;
-  margin-bottom: 1.25rem !important;
-}
-
-.pitch {
-  font-size: 1.1rem;
-  color: #d5e6ec;
-  max-width: 40rem;
-}
-
 .muted-note {
   color: var(--fs-muted);
   font-size: 0.9rem;
-}
-
-/* Cover / home brand */
-.brand-kicker {
-  display: inline-block;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  color: var(--fs-accent);
-  margin-bottom: 0.5rem;
 }
