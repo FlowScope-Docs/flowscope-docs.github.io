@@ -65,7 +65,3 @@ N/A  -  use Save/Revert/Refresh deliberately; do not leave dirty drafts overnigh
 - [04  -  Chart and Table](04-chart-and-table.md)
 - [13 - FAQ](13-faq-and-troubleshooting.md)
 
-<div class="chapter-nav">
-<a href="#/">← Home</a>
-<a href="#/06-editor-node-forms">Next: Node forms →</a>
-</div>

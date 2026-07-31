@@ -134,7 +134,3 @@ Acknowledge form fields are documented in [10](10-editor-acknowledge.md).
 - [10 - Acknowledge](10-editor-acknowledge.md)
 - [13 - FAQ](13-faq-and-troubleshooting.md)
 
-<div class="chapter-nav">
-<a href="#/">← Home</a>
-<a href="#/04-chart-and-table">Next: Chart and Table →</a>
-</div>

@@ -1,20 +1,50 @@
-/* FlowScope guidebook — matches app canvas / accent tokens */
+/* FlowScope guidebook — light default + soft dark via data-theme */
 
 :root {
-  --fs-canvas: #071219;
-  --fs-panel: #0d1c27;
-  --fs-panel-alt: #112736;
-  --fs-line: #1d3a4d;
-  --fs-text: #e9f4f7;
-  --fs-muted: #9bb4c0;
-  --fs-accent: #3ba7c3;
-  --fs-accent-soft: #173949;
-  --fs-warning: #f0ad4e;
-  --fs-success: #57b67d;
-  --fs-danger: #ef6f6c;
-  --fs-radius: 1rem;
+  --fs-canvas: #f7f6f2;
+  --fs-panel: #ffffff;
+  --fs-panel-alt: #f0efea;
+  --fs-line: #e2e0d8;
+  --fs-text: #1c2430;
+  --fs-muted: #5c6b7a;
+  --fs-accent: #0d7a94;
+  --fs-accent-soft: #e6f3f6;
+  --fs-accent-hover: #0a6278;
+  --fs-warning: #b45309;
+  --fs-success: #15803d;
+  --fs-danger: #b91c1c;
+  --fs-radius: 0.75rem;
+  --fs-shadow: 0 1px 2px rgba(28, 36, 48, 0.04), 0 8px 24px rgba(28, 36, 48, 0.06);
   --sidebar-width: 280px;
   --theme-color: var(--fs-accent);
+  --fs-code-bg: #eef2f4;
+  --fs-code-text: #0d4a5c;
+  --fs-pre-bg: #1c2430;
+  --fs-pre-text: #e8eef2;
+  --fs-toggle-bg: var(--fs-panel);
+  --fs-toggle-border: var(--fs-line);
+}
+
+html[data-theme="dark"] {
+  --fs-canvas: #121a21;
+  --fs-panel: #1a2430;
+  --fs-panel-alt: #222e3a;
+  --fs-line: #2e3d4a;
+  --fs-text: #e4ecef;
+  --fs-muted: #9aadb8;
+  --fs-accent: #4eb4cc;
+  --fs-accent-soft: #1a3340;
+  --fs-accent-hover: #6ec4d8;
+  --fs-warning: #e0a04a;
+  --fs-success: #5fbc84;
+  --fs-danger: #e87a78;
+  --fs-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 8px 24px rgba(0, 0, 0, 0.28);
+  --fs-code-bg: #222e3a;
+  --fs-code-text: #b8e0ec;
+  --fs-pre-bg: #0e151b;
+  --fs-pre-text: #dce8ee;
+  --fs-toggle-bg: var(--fs-panel);
+  --fs-toggle-border: var(--fs-line);
 }
 
 html,
@@ -26,14 +56,58 @@ body:before {
 
 body {
   min-height: 100vh;
-  background:
-    radial-gradient(circle at top, rgba(59, 167, 195, 0.12), transparent 32%),
-    radial-gradient(circle at bottom right, rgba(240, 173, 78, 0.1), transparent 28%),
-    var(--fs-canvas) !important;
+  background: var(--fs-canvas) !important;
   font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-size: 16.5px;
+  line-height: 1.7;
 }
 
-/* Override Docsify vue light chrome */
+/* Theme toggle */
+.theme-toggle {
+  position: fixed;
+  top: 0.85rem;
+  right: 1rem;
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--fs-toggle-border);
+  border-radius: 999px;
+  background: var(--fs-toggle-bg);
+  box-shadow: var(--fs-shadow);
+  color: var(--fs-text);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--fs-accent);
+  background: var(--fs-accent-soft);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--fs-accent);
+  outline-offset: 2px;
+}
+
+.theme-toggle .icon-sun,
+.theme-toggle .icon-moon {
+  width: 1.15rem;
+  height: 1.15rem;
+  display: none;
+}
+
+html:not([data-theme="dark"]) .theme-toggle .icon-moon {
+  display: block;
+}
+
+html[data-theme="dark"] .theme-toggle .icon-sun {
+  display: block;
+}
+
+/* Override Docsify vue chrome */
 .sidebar,
 .sidebar ul,
 .sidebar ul li,
@@ -44,19 +118,14 @@ main {
 }
 
 .sidebar {
-  background: rgba(13, 28, 39, 0.96) !important;
-}
-
-/* Docsify chrome */
-.sidebar {
-  background: rgba(13, 28, 39, 0.96);
-  border-right: 1px solid rgba(29, 58, 77, 0.95);
+  background: var(--fs-panel) !important;
+  border-right: 1px solid var(--fs-line);
   color: var(--fs-muted);
 }
 
 .sidebar .app-name {
   font-weight: 650;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
   color: var(--fs-text);
   border-bottom: 1px solid var(--fs-line);
 }
@@ -77,7 +146,7 @@ main {
   margin: 1rem 0.75rem 0.35rem;
   font-size: 0.7rem;
   font-weight: 650;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--fs-accent);
 }
@@ -86,6 +155,7 @@ main {
   margin: 0 !important;
   padding: 0.75rem !important;
   border-bottom: 1px solid var(--fs-line) !important;
+  background: transparent !important;
 }
 
 .search input {
@@ -93,6 +163,10 @@ main {
   border: 1px solid var(--fs-line) !important;
   color: var(--fs-text) !important;
   border-radius: 0.75rem !important;
+}
+
+.search input::placeholder {
+  color: var(--fs-muted) !important;
 }
 
 .search .matching-post {
@@ -121,8 +195,10 @@ main {
 }
 
 .markdown-section {
-  max-width: 52rem;
+  max-width: 48rem;
   color: var(--fs-text);
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
 .markdown-section h1,
@@ -130,17 +206,25 @@ main {
 .markdown-section h3 {
   color: var(--fs-text);
   font-weight: 650;
+  line-height: 1.3;
 }
 
 .markdown-section h1 {
   letter-spacing: -0.02em;
   margin-bottom: 0.75rem;
+  font-size: 2rem;
 }
 
 .markdown-section h2 {
-  margin-top: 2rem;
+  margin-top: 2.25rem;
   padding-bottom: 0.35rem;
   border-bottom: 1px solid var(--fs-line);
+  font-size: 1.35rem;
+}
+
+.markdown-section h3 {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
 }
 
 .markdown-section a {
@@ -148,38 +232,40 @@ main {
 }
 
 .markdown-section a:hover {
-  color: #6ec4d8;
+  color: var(--fs-accent-hover);
 }
 
 .markdown-section p,
 .markdown-section li {
-  color: #d5e6ec;
-  line-height: 1.65;
+  color: var(--fs-text);
+  line-height: 1.7;
 }
 
 .markdown-section strong {
   color: var(--fs-text);
+  font-weight: 650;
 }
 
 .markdown-section code {
-  background: var(--fs-panel-alt);
-  border: 1px solid rgba(29, 58, 77, 0.8);
-  color: #b8e6f2;
+  background: var(--fs-code-bg);
+  border: 1px solid var(--fs-line);
+  color: var(--fs-code-text);
   border-radius: 0.35rem;
   padding: 0.1rem 0.35rem;
+  font-size: 0.9em;
 }
 
 .markdown-section pre {
-  background: var(--fs-panel) !important;
+  background: var(--fs-pre-bg) !important;
   border: 1px solid var(--fs-line);
   border-radius: var(--fs-radius);
-  box-shadow: 0 18px 45px rgba(4, 14, 20, 0.24);
+  box-shadow: var(--fs-shadow);
 }
 
 .markdown-section pre > code {
   background: transparent;
   border: none;
-  color: #dceef4;
+  color: var(--fs-pre-text);
 }
 
 .markdown-section table {
@@ -189,6 +275,7 @@ main {
   border: 1px solid var(--fs-line);
   border-radius: var(--fs-radius);
   overflow: hidden;
+  box-shadow: none;
 }
 
 .markdown-section tr {
@@ -206,15 +293,16 @@ main {
 .markdown-section th {
   background: var(--fs-panel-alt);
   color: var(--fs-text);
+  font-weight: 650;
 }
 
 .markdown-section td {
-  background: rgba(13, 28, 39, 0.55);
+  background: var(--fs-panel);
 }
 
 .markdown-section blockquote {
   border-left: 3px solid var(--fs-accent);
-  background: rgba(23, 57, 73, 0.45);
+  background: var(--fs-accent-soft);
   color: var(--fs-muted);
   border-radius: 0 0.75rem 0.75rem 0;
   padding: 0.75rem 1rem;
@@ -225,35 +313,125 @@ main {
   border-top: 1px solid var(--fs-line);
 }
 
-.chapter-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  justify-content: space-between;
-  margin-top: 2.5rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--fs-line);
-  font-size: 0.95rem;
+/* Landing page role cards */
+.role-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
 }
 
-.chapter-nav a {
+.role-card {
+  background: var(--fs-panel);
   border: 1px solid var(--fs-line);
-  border-radius: 999px;
-  padding: 0.45rem 0.9rem;
-  background: rgba(17, 39, 54, 0.7);
+  border-radius: var(--fs-radius);
+  padding: 1.15rem 1.25rem;
+  box-shadow: var(--fs-shadow);
+}
+
+.role-card h3 {
+  margin: 0 0 0.35rem !important;
+  font-size: 1.05rem !important;
+  border: none !important;
+  padding: 0 !important;
+  color: var(--fs-text) !important;
+}
+
+.role-card .role-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fs-accent);
+  margin-bottom: 0.5rem;
+}
+
+.role-card p {
+  margin: 0 0 0.75rem;
+  color: var(--fs-muted) !important;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.role-card ol {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.92rem;
+}
+
+.role-card ol li {
+  margin: 0.25rem 0;
+  color: var(--fs-text) !important;
+}
+
+.role-card a.start-link {
+  display: inline-block;
+  margin-top: 0.85rem;
+  font-weight: 600;
   text-decoration: none !important;
 }
 
-.chapter-nav a:hover {
-  border-color: rgba(59, 167, 195, 0.65);
+.quick-jumps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0 1.5rem;
 }
 
+.quick-jumps a {
+  display: inline-block;
+  border: 1px solid var(--fs-line);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  background: var(--fs-panel);
+  text-decoration: none !important;
+  color: var(--fs-text) !important;
+  font-size: 0.92rem;
+  box-shadow: var(--fs-shadow);
+}
+
+.quick-jumps a:hover {
+  border-color: var(--fs-accent);
+  background: var(--fs-accent-soft);
+  color: var(--fs-accent) !important;
+}
+
+.intro-lead {
+  font-size: 1.1rem;
+  color: var(--fs-muted) !important;
+  margin-bottom: 0.5rem;
+}
+
+/* Docsify pagination */
+.docsify-pagination-container {
+  border-top: 1px solid var(--fs-line) !important;
+  margin-top: 2.5rem !important;
+  padding-top: 1.25rem !important;
+}
+
+.pagination-item a {
+  color: var(--fs-accent) !important;
+}
+
+.pagination-item-label {
+  color: var(--fs-muted) !important;
+}
+
+/* Copy-code button */
+.docsify-copy-code-button {
+  background: var(--fs-panel-alt) !important;
+  color: var(--fs-text) !important;
+  border: 1px solid var(--fs-line) !important;
+}
+
+/* Helpers used in chapters */
 .shot-pending {
   margin: 0.75rem 0 1rem !important;
   padding: 0.5rem 0.75rem;
   border-radius: 0.65rem;
-  border: 1px dashed rgba(29, 58, 77, 0.95);
-  background: rgba(7, 18, 25, 0.55);
+  border: 1px dashed var(--fs-line);
+  background: var(--fs-panel-alt);
   color: var(--fs-muted) !important;
   font-size: 0.85rem;
   font-style: normal !important;
@@ -262,4 +440,12 @@ main {
 .muted-note {
   color: var(--fs-muted);
   font-size: 0.9rem;
+}
+
+/* Cover github corner a bit on small screens so toggle stays clear */
+@media (max-width: 768px) {
+  .theme-toggle {
+    top: 0.65rem;
+    right: 0.65rem;
+  }
 }

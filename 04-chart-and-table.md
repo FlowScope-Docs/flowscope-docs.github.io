@@ -125,7 +125,3 @@ Viewers do not edit; they still use Detail, Chart navigation, and Table export.
 - [07  -  Edges and lineage](07-editor-edges-and-lineage.md)
 - [12  -  Standards](12-standards-and-use-cases.md)
 
-<div class="chapter-nav">
-<a href="#/">← Home</a>
-<a href="#/05-editor-draft-and-history">Next: Draft and History →</a>
-</div>

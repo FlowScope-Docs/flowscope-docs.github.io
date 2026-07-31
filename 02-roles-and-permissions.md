@@ -72,7 +72,3 @@ No dedicated screenshot. Role differences show up as missing History / Edit / Ad
 - [10 - Acknowledge](10-editor-acknowledge.md)
 - [11 - Admin](11-admin.md)
 
-<div class="chapter-nav">
-<a href="#/">← Home</a>
-<a href="#/03-monitor">Next: Monitor →</a>
-</div>

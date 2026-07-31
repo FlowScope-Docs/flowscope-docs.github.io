@@ -124,7 +124,3 @@ N/A  -  use screenshots in feature chapters.
 - [10 - Acknowledge](10-editor-acknowledge.md)
 - [13 - FAQ](13-faq-and-troubleshooting.md)
 
-<div class="chapter-nav">
-<a href="#/">← Home</a>
-<a href="#/13-faq-and-troubleshooting">Next: FAQ →</a>
-</div>

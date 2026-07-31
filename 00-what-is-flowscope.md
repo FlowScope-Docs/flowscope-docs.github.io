@@ -78,8 +78,3 @@ N/A
 - [02 - Roles and permissions](02-roles-and-permissions.md)
 - [09 - Job monitoring](09-editor-job-monitoring.md) (Editors instrumenting CML jobs)
 
-<div class="chapter-nav">
-<a href="#/">← Home</a>
-<a href="#/01-getting-started">Next: Getting started →</a>
-</div>
-

@@ -165,7 +165,3 @@ Link to the report; lineage from upstream datasets/jobs.
 - [09 - Job monitoring](09-editor-job-monitoring.md)
 - [12  -  Standards](12-standards-and-use-cases.md)
 
-<div class="chapter-nav">
-<a href="#/">← Home</a>
-<a href="#/07-editor-edges-and-lineage">Next: Edges and lineage →</a>
-</div>

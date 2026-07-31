@@ -78,7 +78,3 @@ You can also acknowledge some mapped missed cases from the execution panel where
 - [09 - Job monitoring](09-editor-job-monitoring.md)
 - [12  -  Standards / playbooks](12-standards-and-use-cases.md)
 
-<div class="chapter-nav">
-<a href="#/">← Home</a>
-<a href="#/11-admin">Next: Admin →</a>
-</div>

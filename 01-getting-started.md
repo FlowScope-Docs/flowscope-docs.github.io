@@ -69,7 +69,3 @@ Pending: you wait with a timestamp; you still cannot open Monitor/Chart/Table.
 - [11 - Admin](11-admin.md)
 - [13 - FAQ](13-faq-and-troubleshooting.md)
 
-<div class="chapter-nav">
-<a href="#/">← Home</a>
-<a href="#/02-roles-and-permissions">Next: Roles and permissions →</a>
-</div>

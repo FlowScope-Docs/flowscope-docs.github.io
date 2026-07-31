@@ -381,7 +381,3 @@ except Exception as e:
 
 Remind the owner: set `cml_job_id` and/or `BACKDATE_*` for adhoc/backdate runs.
 
-<div class="chapter-nav">
-<a href="#/">← Home</a>
-<a href="#/10-editor-acknowledge">Next: Acknowledge →</a>
-</div>

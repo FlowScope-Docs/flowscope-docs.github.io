@@ -115,6 +115,3 @@ N/A
 - [11 - Admin](11-admin.md)
 - [12  -  Standards and playbooks](12-standards-and-use-cases.md)
 
-<div class="chapter-nav">
-<a href="#/">← Home</a>
-</div>

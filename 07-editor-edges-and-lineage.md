@@ -80,7 +80,3 @@ Editors, Admins, Owners.
 - [08  -  Schedule standards](08-editor-schedule-standards.md)
 - [03 - Monitor](03-monitor.md) (dependency row order)
 
-<div class="chapter-nav">
-<a href="#/">← Home</a>
-<a href="#/08-editor-schedule-standards">Next: Schedule standards →</a>
-</div>

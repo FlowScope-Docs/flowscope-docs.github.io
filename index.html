@@ -6,10 +6,41 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="FlowScope coworker guidebook — ETL lineage and CML job monitoring" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("fsTheme");
+        var theme =
+          stored === "light" || stored === "dark"
+            ? stored
+            : window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
   <link rel="stylesheet" href="theme.css" />
 </head>
 <body>
+  <button
+    type="button"
+    class="theme-toggle"
+    id="theme-toggle"
+    aria-label="Toggle light and dark theme"
+    title="Toggle theme"
+  >
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+    </svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3 7 7 0 1 0 21 14.5z" />
+    </svg>
+  </button>
   <div id="app">Loading…</div>
   <script>
     window.$docsify = {
@@ -23,9 +54,37 @@
         placeholder: "Search the guidebook",
         noData: "No results",
       },
+      pagination: {
+        previousText: "Previous",
+        nextText: "Next",
+        crossChapter: true,
+        crossChapterText: true,
+      },
+      copyCode: {
+        buttonText: "Copy",
+        errorText: "Error",
+        successText: "Copied",
+      },
     };
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script>
+    (function () {
+      var btn = document.getElementById("theme-toggle");
+      if (!btn) return;
+      btn.addEventListener("click", function () {
+        var current = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        var next = current === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", next);
+        try {
+          localStorage.setItem("fsTheme", next);
+        } catch (e) {}
+      });
+    })();
+  </script>
 </body>
 </html>

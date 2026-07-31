@@ -92,7 +92,3 @@ All schedule UI times are **WIB (Asia/Jakarta)**.
 - [03 - Monitor](03-monitor.md)
 - [10 - Acknowledge](10-editor-acknowledge.md)
 
-<div class="chapter-nav">
-<a href="#/">← Home</a>
-<a href="#/09-editor-job-monitoring">Next: Job monitoring →</a>
-</div>

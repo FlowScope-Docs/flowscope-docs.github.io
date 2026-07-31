@@ -76,7 +76,3 @@ Role meanings: [02 - Roles and permissions](02-roles-and-permissions.md).
 - [01 - Getting started](01-getting-started.md)
 - [02 - Roles and permissions](02-roles-and-permissions.md)
 
-<div class="chapter-nav">
-<a href="#/">← Home</a>
-<a href="#/12-standards-and-use-cases">Next: Standards and use cases →</a>
-</div>
