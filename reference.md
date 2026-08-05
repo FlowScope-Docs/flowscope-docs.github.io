@@ -68,7 +68,7 @@ All Monitor times and schedule run times use **WIB (Asia/Jakarta)** unless a fie
 |------|---------|
 | **Lineage** | Graph of tables, jobs, and delivery nodes connected by data edges |
 | **Node** | One registry item (table, ETL job, script, export, Telegram, Sheet, Looker) |
-| **Edge** | Relationship between nodes (`feeds`, `produces`, `exports_to`, `notifies`, or schedule-only `job_dependency`) |
+| **Edge** | Relationship between nodes (`feeds`, `produces`, `exports_to`, or schedule-only `job_dependency`) |
 | **Draft** | Unsaved local edits until you Save |
 | **Revision** | Saved snapshot in History; restore creates a new revision |
 | **CML / Livyatan** | Job runtime platform; job `link` URL contains `/jobs/{id}` |

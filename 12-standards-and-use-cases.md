@@ -24,7 +24,7 @@ Viewers follow playbooks for triage. Editors enforce form and monitoring standar
 
 | Topic | Standard |
 |-------|----------|
-| Node types | Use the type that matches the asset: table, etl_job, typescript_script, csv_export, telegram, google_sheet, looker_studio ([06](06-editor-node-forms.md)) |
+| Node types | Use the type that matches the asset: table, etl_job, google_sheet, looker_studio ([06](06-editor-node-forms.md)). Apps Script lives with Google Sheet — not a separate node type. |
 | Data vs schedule | `feeds` / `produces` / … for lineage; `job_dependency` only via frequency **dependent** + Depends on ([07](07-editor-edges-and-lineage.md)) |
 | Job Monitor mapping | Livyatan `link` must end with `/jobs/{id}`; save the graph ([09](09-editor-job-monitoring.md)) |
 | Schedule times | WIB; multi run-times ≥ 60 minutes apart ([08](08-editor-schedule-standards.md)) |

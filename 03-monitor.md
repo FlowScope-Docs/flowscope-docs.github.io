@@ -36,9 +36,7 @@ All times in the table and timeline axis are **WIB (Asia/Jakarta)** unless noted
 2. Read the **summary strip** (table only): running count, successes today, failures today, average runtime today, webhook health.
 3. Scan the executions table: job name (or CML id), status, step, Start/End (WIB), duration, row count, error snippet.
 4. Filter with **status**, **text search**, **job node id**, and/or **execution id**.
-5. Toggle **auto-refresh**: on = poll every **30 seconds**; off = manual refresh only.
-
-**Not available yet:** choosing 5s / 10s / 60s intervals  -  only on/off at 30s.
+5. Toggle **auto-refresh** with the interval picker: **Off** (manual only) or **5s / 10s / 30s / 60s**. Only the active Monitor sub-view polls (table executions vs timeline schedule). While an execution detail sidebar is open, Overview / Events / Telegram soft-refresh on the same cadence (no full-panel loading flash).
 
 <p class="shot-pending">Screenshot pending — assets/monitor-table-overview.png: Monitor table with summary strip</p>
 
@@ -114,7 +112,7 @@ Keep/clear: switching table ↔ timeline **keeps** `job`, **clears** `execution`
 
 | Control | Standard |
 |---------|----------|
-| Auto-refresh | On = 30s; off = manual |
+| Auto-refresh | Off / 5s / 10s / 30s / 60s; polls only the active sub-view; open execution detail soft-refreshes with the poll |
 | Filters | Use job/execution ids when you need a pinned filter; row click alone is not enough for `execution` |
 | Times | Read WIB on Start/End and axis; payload timestamps from jobs are UTC |
 
@@ -125,7 +123,7 @@ Acknowledge form fields are documented in [10](10-editor-acknowledge.md).
 - **No lineage link** → map the Livyatan URL on the node and save.
 - **Empty Events** → no events stored yet, or expected/missed slot with no linked execution.
 - **Aggregated blocks** → zoom in before concluding a single run is missing.
-- **Not available yet:** configurable poll intervals; live event feed sidebar.
+- **Not available yet:** live event feed sidebar (separate from the execution Events tab).
 
 ## Related
 

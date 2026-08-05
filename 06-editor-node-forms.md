@@ -6,7 +6,7 @@
 
 ## Purpose
 
-Create, edit, and delete lineage nodes for all seven types. Correct forms keep Chart/Table accurate and  -  for jobs  -  keep Monitor mapped via the Livyatan `link`.
+Create, edit, and delete lineage nodes for all four types. Correct forms keep Chart/Table accurate and  -  for jobs  -  keep Monitor mapped via the Livyatan `link`.
 
 ## Who
 
@@ -14,7 +14,7 @@ Editors (= job authors), Admins, Owners. Save through the [draft workflow](05-ed
 
 ## When to use
 
-- Register a new table, job, script, export, Telegram bot, Sheet, or Looker asset
+- Register a new table, job, Google Sheet, or Looker asset
 - Fix owner, links, schedule, lineage, or impact metadata
 - Remove a node that no longer exists
 
@@ -52,7 +52,7 @@ If the Livyatan URL is wrong or missing `/jobs/{id}`, Monitor shows **No lineage
 
 1. On Chart or Table, start **create** for the node type you need.
 2. Fill required Identity fields (Type, Name; Schema + Table for tables).
-3. Fill Links  -  for ETL/script jobs put the Livyatan job URL in **link**.
+3. Fill Links  -  for jobs put the Livyatan job URL in **link**.
 4. Set Resources and Schedule as needed ([08](08-editor-schedule-standards.md)).
 5. Pick Source/Target (and Depends on if dependent) with the searchable pickers ([07](07-editor-edges-and-lineage.md)).
 6. Add Impact & notes.
@@ -91,7 +91,7 @@ If the Livyatan URL is wrong or missing `/jobs/{id}`, Monitor shows **No lineage
 | Schedule | Usually N/A or light metadata  -  producers are jobs |
 | Lineage | Producer/consumer jobs appear from edges |
 
-### ETL job (`etl_job`)
+### Job (`etl_job`)
 
 **Use when:** A Livyatan/CML (or equivalent) batch/pipeline job.
 
@@ -105,33 +105,15 @@ If the Livyatan URL is wrong or missing `/jobs/{id}`, Monitor shows **No lineage
 | Lineage | Source tables → Target tables |
 | Monitoring | Instrument Telegram events ([09](09-editor-job-monitoring.md)) |
 
-### TypeScript script (`typescript_script`)
-
-**Use when:** A scheduled/scripted job in the TS runtime family (same job-detail pattern as ETL).
-
-Same link/schedule/lineage patterns as ETL jobs when it runs as a monitored job.
-
-### CSV export (`csv_export`)
-
-**Use when:** An export artifact or export job in the registry.
-
-Fill owner, links, and lineage to the tables/jobs that produce the file. Use schedule if the export is timed.
-
-### Telegram (`telegram`)
-
-**Use when:** A Telegram bot or channel that is part of the delivery/notification lineage (not the FlowScope ingest bot itself unless you model it).
-
-Link to the bot/docs; connect with `notifies` / related edges as appropriate ([07](07-editor-edges-and-lineage.md)).
-
 ### Google Sheet (`google_sheet`)
 
-**Use when:** A Sheet that is a source or sink in the pipeline.
+**Use when:** A Sheet that is a source or sink in the pipeline (including Apps Script that lives with the Sheet — do not model Apps Script as a separate node type).
 
-Link to the Sheet; lineage to jobs that read/write it.
+Link to the Sheet; lineage to jobs that read/write it. Jobs that write a Sheet typically use `exports_to`.
 
 ### Looker Studio (`looker_studio`)
 
-**Use when:** A dashboard/report asset fed by lineage tables/exports.
+**Use when:** A dashboard/report asset fed by lineage tables or jobs.
 
 Link to the report; lineage from upstream datasets/jobs.
 
@@ -164,4 +146,3 @@ Link to the report; lineage from upstream datasets/jobs.
 - [08  -  Schedule standards](08-editor-schedule-standards.md)
 - [09 - Job monitoring](09-editor-job-monitoring.md)
 - [12  -  Standards](12-standards-and-use-cases.md)
-

@@ -69,10 +69,7 @@ Click upstream/downstream/dependent chips to navigate.
 2. Pick a **mode** (one per node type):
 
    - Tables  
-   - ETL Jobs  
-   - TypeScript Scripts  
-   - CSV Exports  
-   - Telegram  
+   - Jobs  
    - Google Sheets  
    - Looker Studio  
 
@@ -115,7 +112,7 @@ Viewers do not edit; they still use Detail, Chart navigation, and Table export.
 - **No results** after filters → clear filters or switch mode.
 - **Graph warnings** after bad edges → Editor must repair links/edges.
 - Deep link `?node=<id>` selects that node on Chart/Table.
-- **Not available yet:** Title Case type labels and chart “family” visuals (planned later).
+- Chart node type labels are Title Case; silhouettes use per-type chrome (storage / courier / destination) with a four-type legend on the canvas toolbar.
 
 ## Related
 

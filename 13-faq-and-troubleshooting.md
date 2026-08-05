@@ -91,10 +91,7 @@ Missing FINISHED/FAILED from the helper. Fix the helper; Editor may acknowledge 
 
 ## Not available yet (do not expect)
 
-- Configurable poll intervals (5s / 10s / 60s)
-- Hide-on-scroll navbar / stable icon-only chrome polish
-- Title Case node type labels / chart family visuals
-- Live event feed sidebar (detail Events tab is the current event UI)
+- Live event feed sidebar (detail Events tab is the current event UI; it soft-refreshes with Monitor auto-refresh)
 
 ---
 

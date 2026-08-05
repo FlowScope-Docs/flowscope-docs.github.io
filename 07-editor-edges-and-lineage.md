@@ -17,7 +17,7 @@ Editors, Admins, Owners.
 | Goal | Relation |
 |------|----------|
 | Job reads/writes tables (data flow) | `feeds` / `produces` (and create-time connection helpers) |
-| Export / notify / deliver | `exports_to` / `notifies` as appropriate |
+| Job writes a Google Sheet (or similar export sink) | `exports_to` |
 | Job B must wait on job A’s schedule | Refresh = **dependent** + Depends-on → `job_dependency` |
 
 ---
@@ -44,7 +44,7 @@ Editors, Admins, Owners.
 ### Edit or delete an edge
 
 1. Open the edge in the editor (Edge form) or change Source/Target/Depends-on on the node form.
-2. Relation types: `feeds`, `produces`, `exports_to`, `notifies`, `job_dependency`.
+2. Relation types: `feeds`, `produces`, `exports_to`, `job_dependency`.
 3. New edges get auto-generated ids.
 4. Delete unused edges; **Save draft**.
 5. Check graph warnings for orphans after deletes.
