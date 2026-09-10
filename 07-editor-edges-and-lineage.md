@@ -1,6 +1,6 @@
 # 07  -  Edges and lineage
 
-**Who:** Editor, Admin, Owner
+**Who:** Editor, Admin, Superadmin
 
 ---
 
@@ -10,7 +10,7 @@ Edges describe **how nodes relate**. Use data/delivery edges for lineage impact 
 
 ## Who
 
-Editors, Admins, Owners.
+Editors, Admins, Superadmins.
 
 ## When to use
 

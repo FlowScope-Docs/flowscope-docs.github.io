@@ -1,6 +1,6 @@
 # 08  -  Schedule standards
 
-**Who:** Editor, Admin, Owner
+**Who:** Editor, Admin, Superadmin
 
 ---
 
@@ -10,7 +10,7 @@ Refresh frequency and run times drive **timeline expected bars** on Monitor. Set
 
 ## Who
 
-Editors (especially job authors), Admins, Owners.
+Editors (especially job authors), Admins, Superadmins.
 
 ## When to use
 

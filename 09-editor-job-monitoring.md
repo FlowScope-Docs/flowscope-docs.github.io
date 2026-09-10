@@ -1,6 +1,6 @@
 # 09 - Job monitoring (CML + Telegram)
 
-**Who:** Editor, Admin, Owner (= job authors)
+**Who:** Editor, Admin, Superadmin (= job authors)
 
 ---
 

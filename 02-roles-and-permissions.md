@@ -22,8 +22,8 @@ Everyone. Admins assign roles; Editors and Viewers should know their limits.
 
 Privilege increases down the table. **Editor = job author** (lineage edits and CML Telegram monitoring).
 
-| Capability | Viewer | Editor | Admin | Owner |
-|------------|:------:|:------:|:-----:|:-----:|
+| Capability | Viewer | Editor | Admin | Superadmin |
+|------------|:------:|:------:|:-----:|:----------:|
 | Read Monitor / Chart / Table | Yes | Yes | Yes | Yes |
 | Edit nodes/edges, Save draft | No | Yes | Yes | Yes |
 | History (list / restore) | No | Yes | Yes | Yes |
@@ -31,13 +31,13 @@ Privilege increases down the table. **Editor = job author** (lineage edits and C
 | Execution detail **Telegram** tab | No | Yes | Yes | Yes |
 | `/admin/users` | No | No | Yes | Yes |
 
-Monitor, Chart, and Table are available to every **member**. History, Edit, acknowledge, and the Telegram tab are Editor+. Admin UI is Admin/Owner only.
+Monitor, Chart, and Table are available to every **member**. History, Edit, acknowledge, and the Telegram tab are Editor+. Admin UI is Admin/Superadmin only.
 
-## Owner vs Admin
+## Superadmin vs Admin
 
-- **Admin** and **Owner** both manage members at `/admin/users`.
-- Invite / approve can assign **viewer**, **editor**, or **admin**  -  not **Owner**.
-- **Owner bootstrap** is only for the empty-workspace case (no members yet). Details: [11 - Admin](11-admin.md).
+- **Admin** and **Superadmin** both manage members at `/admin/users`.
+- Invite / approve can assign **viewer**, **editor**, or **admin**  -  not **Superadmin**.
+- **Superadmin bootstrap** is only for the empty-workspace case (no members yet). Details: [11 - Admin](11-admin.md).
 
 ## What Viewers see on Monitor detail
 
@@ -50,7 +50,7 @@ Viewers do **not** get acknowledge forms or the Telegram tab. Those are Editor+.
 1. After login, check whether **History** appears in the view switcher and whether Chart/Table show an **Edit** tab.
 2. If you only see read-only Detail → you are likely a **Viewer**.
 3. If you need edit, acknowledge, or History → ask an Admin to grant **Editor** (or higher).
-4. If you need to invite coworkers → you need **Admin** or **Owner**.
+4. If you need to invite coworkers → you need **Admin** or **Superadmin**.
 
 ## Form / field standards
 

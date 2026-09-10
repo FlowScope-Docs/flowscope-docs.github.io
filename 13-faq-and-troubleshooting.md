@@ -24,7 +24,7 @@ Something looks wrong or a control is missing.
 You are not a workspace member. Submit an access request and wait for Admin approval ([01](01-getting-started.md), [11](11-admin.md)).
 
 **Who can approve me?**  
-Admin or Owner on `/admin/users`.
+Admin or Superadmin on `/admin/users`.
 
 ---
 

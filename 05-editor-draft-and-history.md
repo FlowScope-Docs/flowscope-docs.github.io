@@ -1,6 +1,6 @@
 # 05  -  Draft workflow and History
 
-**Who:** Editor, Admin, Owner
+**Who:** Editor, Admin, Superadmin
 
 ---
 
@@ -10,7 +10,7 @@ Edits in Chart/Table stay in a **local draft** until you save. **History** lists
 
 ## Who
 
-Editors, Admins, and Owners. Viewers do not see History or Save/Revert controls.
+Editors, Admins, and Superadmins. Viewers do not see History or Save/Revert controls.
 
 ## When to use
 

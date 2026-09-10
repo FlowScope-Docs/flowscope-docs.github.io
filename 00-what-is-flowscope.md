@@ -30,7 +30,7 @@ Everyone who uses the app. How deep you go depends on role  -  see [02 - Roles a
 
 - A **lineage graph** of tables, jobs, scripts, exports, Telegram bots, Sheets, and Looker assets
 - A **Monitor** of CML executions reported over Telegram (expected vs actual on a timeline)
-- A **shared workspace** (one workspace for the team; slug `default`)
+- A **shared workspace** (one workspace for the team; slug `data-drb`, name **Data DRB**)
 
 
 

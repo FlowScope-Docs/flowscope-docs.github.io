@@ -41,7 +41,7 @@ FlowScope helps you answer what feeds what, who owns a job, when a run was expec
     <a class="start-link" href="#/00-what-is-flowscope">Begin →</a>
   </div>
   <div class="role-card">
-    <span class="role-tag">Admin / Owner</span>
+    <span class="role-tag">Admin / Superadmin</span>
     <h3>Manage access</h3>
     <p>Everything an Editor can do, plus invite users, approve requests, and set roles.</p>
     <ol>

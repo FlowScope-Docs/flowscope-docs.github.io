@@ -1,6 +1,6 @@
 # 10 - Acknowledge missed / stuck runs
 
-**Who:** Editor, Admin, Owner
+**Who:** Editor, Admin, Superadmin
 
 ---
 

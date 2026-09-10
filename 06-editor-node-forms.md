@@ -1,6 +1,6 @@
 # 06  -  Node forms
 
-**Who:** Editor, Admin, Owner
+**Who:** Editor, Admin, Superadmin
 
 ---
 
@@ -10,7 +10,7 @@ Create, edit, and delete lineage nodes for all four types. Correct forms keep Ch
 
 ## Who
 
-Editors (= job authors), Admins, Owners. Save through the [draft workflow](05-editor-draft-and-history.md).
+Editors (= job authors), Admins, Superadmins. Save through the [draft workflow](05-editor-draft-and-history.md).
 
 ## When to use
 

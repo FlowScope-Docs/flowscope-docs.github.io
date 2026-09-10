@@ -11,7 +11,7 @@ Quick lookup for roles, chapter index, deep links, glossary, and timezone. For r
 |------|--------|
 | **Viewer** | Read Monitor, Chart, Table. No edit/save, History, acknowledge, Admin, or Telegram tab on execution detail. |
 | **Editor** (= job author) | Everything Viewer can do, plus draft/save, History restore, acknowledge, Telegram tab; owns lineage nodes and CML Telegram monitoring payloads. |
-| **Admin / Owner** | Everything Editor can do, plus `/admin/users` (invite, approve requests, roles). |
+| **Admin / Superadmin** | Everything Editor can do, plus `/admin/users` (invite, approve requests, roles). |
 
 There is **no separate “job author” product role** — Editors write and instrument jobs.
 
@@ -33,7 +33,7 @@ There is **no separate “job author” product role** — Editors write and ins
 | 09 | [Job monitoring (CML + Telegram)](09-editor-job-monitoring.md) | Editor+ |
 | — | [Incorporate Flow Report](incorporate-flow-report.md) | Editor+ (job instrumentation) |
 | 10 | [Acknowledge missed / stuck runs](10-editor-acknowledge.md) | Editor+ |
-| 11 | [Admin](11-admin.md) | Admin / Owner |
+| 11 | [Admin](11-admin.md) | Admin / Superadmin |
 | 12 | [Standards and use cases](12-standards-and-use-cases.md) | Everyone |
 | 13 | [FAQ and troubleshooting](13-faq-and-troubleshooting.md) | Everyone |
 

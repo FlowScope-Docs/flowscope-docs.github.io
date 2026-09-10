@@ -33,7 +33,7 @@ Anyone with a FlowScope login. Membership is separate from sign-in: you must be 
 1. Sign in successfully.
 2. If you are not a workspace member, you see the **access request** panel (not the graph).
 3. Submit a request. Your session email is stored for Admin review.
-4. Wait for an Admin/Owner to approve or reject ([11 - Admin](11-admin.md)).
+4. Wait for an Admin/Superadmin to approve or reject ([11 - Admin](11-admin.md)).
 5. If rejected, you can submit a new request.
 
 Pending: you wait with a timestamp; you still cannot open Monitor/Chart/Table.
@@ -59,7 +59,7 @@ Pending: you wait with a timestamp; you still cannot open Monitor/Chart/Table.
 ## Edge cases
 
 - **Signed in, no membership** → access request panel, not an empty Monitor.
-- **No members in the workspace yet** → eligible users may see a link toward `/admin/users` to claim the first **Owner** (bootstrap). See [11 - Admin](11-admin.md).
+- **No members in the workspace yet** → eligible users may see a link toward `/admin/users` to claim the first **Superadmin** (bootstrap). See [11 - Admin](11-admin.md).
 - **History missing from the switcher** → your role is Viewer ([02](02-roles-and-permissions.md)).
 
 ## Related
