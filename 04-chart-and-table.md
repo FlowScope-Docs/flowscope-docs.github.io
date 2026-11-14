@@ -56,13 +56,13 @@ The right sidebar has a **combined header** and three tabs: **Overview**, **Line
 - Thin **type-colour** accent on the left; type label on top (Looker/Google Sheet include the chart or sheet name in that line).
 - **View only** badge for viewers; icon buttons for **Edit** (Editor+), **Monitor** (jobs), **Focus** / **View chart**, and **Close**.
 - Node **name**, then a **location** line: tables show `schema.table` with copy; Looker/Sheet show menu/submenu or spreadsheet/page (no copy).
-- **Summary strip:** Owner · Refresh · Upstream **N** · Downstream **N** (empty Owner/Refresh show **—**). Click a count to open the **Lineage** tab. Adhoc/realtime **Refresh** appears here.
+- **Summary strip:** Owner · Refresh · Sources **N** · Targets **N** (empty Owner/Refresh show **—**). Click a count to open **Overview** and scroll to **Data flow**. Adhoc/realtime **Refresh** appears here.
 - **Graph warnings** (if any) collapse in an amber banner above the tabs.
 
 **Tabs**
 
-- **Overview** — Identity (created/updated by, schema/table or Looker/Sheet fields, last updated, scope tags), Links (**Job ID** with copy for jobs), Resources and Schedule when they apply. Owner and Refresh are only in the summary strip, not repeated here.
-- **Lineage** — Grouped lists (upstream, downstream, jobs, source/target tables, etc.). Click a row to select and focus that node. Unresolved table refs show as “not in chart” and are not clickable.
+- **Overview** — Identity (created/updated by, schema/table or Looker/Sheet fields, last updated, scope tags), then **Data flow** (direct **Source tables** and **Target tables**). For **jobs**, lists configured source and target tables. For **tables**, **Google Sheet**, and **Looker Studio**, shows tables one data job away, with a **via job** line on each row when applicable. Unresolved table refs are muted, “not in chart”, and not clickable. Then Links (**Job ID** with copy for jobs), Resources and Schedule when they apply. Owner and Refresh are only in the summary strip, not repeated here.
+- **Lineage** — **Job relationships only** (e.g. prerequisite and dependent jobs for jobs; produced-by and feeds jobs for tables/sheets/Looker). Click a row to select and focus that node. No full transitive upstream/downstream node lists.
 - **Notes** — Business purpose, failure impact, and notes (tab label dims when all empty).
 
 **Empty fields:** Link, Scopes, Owner, Refresh, and Depends on (for dependent jobs) always show **—** when blank; most other empty fields are hidden. Empty Lineage/Notes tabs show short placeholder messages.
