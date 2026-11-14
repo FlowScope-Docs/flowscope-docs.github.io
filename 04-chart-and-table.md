@@ -49,19 +49,29 @@ If Editors see **graph warnings** (orphan/invalid edges), fix them in Edit befor
 
 ### Read the Detail panel
 
-Detail is type-aware and shows relevant fields even when empty. For job-like nodes, sections follow:
+The right sidebar has a **combined header** and three tabs: **Overview**, **Lineage**, and **Notes**.
 
-**Identity → Links → Resources → Schedule → Lineage → Impact & notes**
+**Header (always visible)**
 
-Useful fields include owner, links (`link` / `link2`), refresh frequency, schedule/cron (when timed), Depends on (when dependent), source/target tables, failure impact, and notes. Created/updated-by show member emails when available.
+- Thin **type-colour** accent on the left; type label on top (Looker/Google Sheet include the chart or sheet name in that line).
+- **View only** badge for viewers; icon buttons for **Edit** (Editor+), **Monitor** (jobs), **Focus** / **View chart**, and **Close**.
+- Node **name**, then a **location** line: tables show `schema.table` with copy; Looker/Sheet show menu/submenu or spreadsheet/page (no copy).
+- **Summary strip:** Owner · Refresh · Upstream **N** · Downstream **N** (empty Owner/Refresh show **—**). Click a count to open the **Lineage** tab. Adhoc/realtime **Refresh** appears here.
+- **Graph warnings** (if any) collapse in an amber banner above the tabs.
 
-Schedule display rules:
+**Tabs**
+
+- **Overview** — Identity (created/updated by, schema/table or Looker/Sheet fields, last updated, scope tags), Links (**Job ID** with copy for jobs), Resources and Schedule when they apply. Owner and Refresh are only in the summary strip, not repeated here.
+- **Lineage** — Grouped lists (upstream, downstream, jobs, source/target tables, etc.). Click a row to select and focus that node. Unresolved table refs show as “not in chart” and are not clickable.
+- **Notes** — Business purpose, failure impact, and notes (tab label dims when all empty).
+
+**Empty fields:** Link, Scopes, Owner, Refresh, and Depends on (for dependent jobs) always show **—** when blank; most other empty fields are hidden. Empty Lineage/Notes tabs show short placeholder messages.
+
+**Schedule display rules** (in Overview unless noted):
 
 - Timed → human schedule + cron
-- Dependent → **Depends on** only (no redundant Schedule/Cron cards)
-- Adhoc / realtime → frequency only
-
-Click upstream/downstream/dependent chips to navigate.
+- Dependent → **Depends on** only (no redundant Schedule/Cron rows)
+- Adhoc / realtime → frequency in the **Refresh** summary strip only
 
 ### Use the Table registry
 
