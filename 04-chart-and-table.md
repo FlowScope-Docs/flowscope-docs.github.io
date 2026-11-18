@@ -1,28 +1,31 @@
-# 04  -  Chart and Table
+# 04 - Chart and Table
 
-**Who:** Everyone (Edit tab and Monitor split: Editor+)
+**Who:** Everyone (Edit, Focus tools, and the Monitor split: Editor+ for edit; Focus and export are available to anyone who can open Chart)
 
 ---
 
 ## Purpose
 
-**Chart** is the interactive lineage graph. **Table** is the mode-driven registry for the same nodes, with filters, sort, and export. Both share a detail sidebar; Editors also get Edit and a Monitor jump for jobs.
+**Chart** is the interactive lineage graph. **Table** is the registry for the same nodes, with filters, sort, and export. Both share a read-only detail sidebar. Editors change nodes in a separate form window, then publish with **Save draft**.
 
 ## Who
 
 | Role | Can |
 |------|-----|
-| Viewer | Browse Chart/Table, search/filter, read Detail, export Table rows, open Chart from Table |
-| Editor+ | Detail + **Edit**, create/update/delete via draft save ([05](05-editor-draft-and-history.md)), Monitor split on job nodes |
+| Viewer | Browse Chart and Table, search and filter, read Detail, export Table rows, open Chart from Table, use Chart Focus and PNG export |
+| Editor+ | Everything above, plus create and edit through the form window, bulk scope tags, and the Monitor split on job nodes |
 
 ## When to use
 
 | Goal | Prefer |
 |------|--------|
-| Impact / upstream-downstream | Chart |
-| Find by owner, schedule, or notes; export | Table |
-| Inspect one node’s fields | Either → Detail sidebar |
-| Open Monitor for a job | Editor+ Monitor split, or Open lineage from Monitor the other way |
+| Impact around one node | Chart, then **Focus** or the detail **Data flow** section |
+| Find by owner, scope, or notes, or export | Table |
+| Read one node’s fields | Either view → detail sidebar |
+| Change a node | Detail **Edit** → form window → **Apply** → **Save draft** |
+| Open Monitor for a job | Editor+ Monitor split, or Open lineage from Monitor |
+
+A **Scope** in the navbar narrows Chart, Table, and Monitor together. The lens is tagged nodes plus data-lineage upstream. **All** is the full graph. `?scope=<slug>` shares a lens. A node link with `?node=` and no `?scope=` opens **All**.
 
 ---
 
@@ -31,104 +34,108 @@
 ### Explore the Chart
 
 1. Open **Chart** (`/?view=chart`).
-2. Pan and zoom the canvas; use the **MiniMap** for large graphs. Layout is left-to-right by data flow (not schema swimlanes).
-3. In the **left sidebar**, search by name, filter by **owner** and **type**, then click a result to select and focus.
-4. Click a node on the canvas. The **right sidebar** shows Detail (and Edit for Editor+).
-5. Read highlighting:
-   - Data upstream / downstream along `feeds` / `produces` (and related data edges)
-   - Schedule prerequisite / dependent jobs when `job_dependency` applies
-   - Schedule dependency edges appear in context (selection/hover), not always as a full permanent overlay
-6. Resize sidebars with the flush drag handles; double-click a handle to reset width.
-7. Use **fullscreen** for a clean canvas (hides chrome and both sidebars until exit).
+2. Pan and zoom. The **MiniMap** sits at the bottom-left. Layout follows data edges (`feeds`, `produces`, `exports_to`), left to right. Schedule **Depends on** edges do not place the nodes.
+3. In the left sidebar, search by the node’s own fields: name, schema, table, owner, purpose, notes, a timed schedule, the Livyatan URL, or a pasted CML job id. Dependent jobs do not match on the prerequisite name buried in “After …”. The internal node id is not searchable.
+4. Under search, filter the **list** with **All / Table / Job / Sheet / Looker**. The canvas stays complete. **Owner** stays in the **Filters** popover.
+5. Click a node. The right sidebar opens with Detail and pushes the canvas narrower without changing zoom. Clicking empty canvas once does nothing. Double-click empty canvas zooms toward the pointer when nothing is selected. With a selection or Focus on, that double-click clears the selection or leaves Focus and does not zoom.
+6. Read highlighting. Data upstream and downstream follow `feeds` / `produces` / `exports_to`. Prerequisite and dependent jobs highlight when a `job_dependency` applies. Those schedule edges show in context (selection or hover), not as a permanent overlay of every dependency.
+7. **Focus** (toolbar or sidebar) limits the canvas to the anchor node, every data-lineage upstream node, and one hop of data downstream. Further downstream and Depends-on edges stay hidden. The visible piece is laid out on its own. Exit from the toolbar, the sidebar, Esc, or a double-click on empty canvas. Exit keeps the current selection and restores the camera. Choosing another node while Focus is on does not move the cone until you apply Focus again (**Focus this node**).
+8. While Focus is on, the address bar gains `?node=` so you can share that cone. An inbound `?node=` link opens Chart already in Focus. Ordinary selection does not write `?node=`. Table **View chart** and Monitor **Open lineage** select and pan, and they leave Focus off.
+9. **Export** (camera on the Chart toolbar) downloads a PNG of the fitted visible graph. With Focus on, the PNG is the cone.
+10. Resize sidebars with the drag handles. Double-click a handle to reset width. **Fullscreen** hides the top chrome and both sidebars until you exit.
 
-If Editors see **graph warnings** (orphan/invalid edges), fix them in Edit before relying on the graph ([05](05-editor-draft-and-history.md), [07](07-editor-edges-and-lineage.md)).
+Cards are the same on the canvas and in the list: a type-colored border, then two lines. **Table** shows schema, then table. **Looker** shows menu · submenu, then chart name. **Google Sheet** shows spreadsheet · page, then sheet name. **Job** shows name, then owner. Schedule text stays in the detail sidebar.
 
-<p class="shot-pending">Screenshot pending — assets/chart-canvas.png: Chart canvas with MiniMap</p>
+<p class="shot-pending">Screenshot pending — assets/chart-canvas.png: Chart canvas with MiniMap and type legend</p>
 
-<p class="shot-pending">Screenshot pending — assets/chart-search-detail.png: Search sidebar and detail panel</p>
+<p class="shot-pending">Screenshot pending — assets/chart-search-detail.png: Search, type toggles, and the detail sidebar</p>
+
+<p class="shot-pending">Screenshot pending — assets/chart-focus.png: Focus cone for one node</p>
+
+If Editors see **graph warnings**, fix Source, Target, or Depends on in the form before treating the graph as trustworthy ([05](05-editor-draft-and-history.md), [07](07-editor-edges-and-lineage.md)).
 
 ### Read the Detail panel
 
-The right sidebar has a **combined header** and three tabs: **Overview**, **Lineage**, and **Notes**.
+The right sidebar is details only. Editors use **Edit** in the header to open the form window. The sidebar has a **combined header** and three tabs: **Overview**, **Lineage**, and **Notes**.
 
 **Header (always visible)**
 
-- Thin **type-colour** accent on the left; type label on top (Looker/Google Sheet include the chart or sheet name in that line).
-- **View only** badge for viewers; icon buttons for **Edit** (Editor+), **Monitor** (jobs), **Focus** / **View chart**, and **Close**.
-- Node **name**, then a **location** line: tables show `schema.table` with copy; Looker/Sheet show menu/submenu or spreadsheet/page (no copy).
-- **Summary strip:** Owner · Refresh · Sources **N** · Targets **N** (empty Owner/Refresh show **—**). Click a count to open **Overview** and scroll to **Data flow**. Adhoc/realtime **Refresh** appears here.
+- Thin **type-colour** accent on the left; type label on top (Looker and Google Sheet include the chart or sheet name in that line).
+- **View only** badge for viewers. Icon buttons for **Edit** (Editor+), **Monitor** (jobs), **Focus** or **Focus this node** / **Exit focus** on Chart, **View chart** on Table, and **Close**.
+- Node **name**, then a **location** line: tables show `schema.table` with copy; Looker and Sheet show menu/submenu or spreadsheet/page (no copy). Jobs have no location line.
+- **Summary strip:** Owner · Refresh · Sources **N** · Targets **N** (empty Owner or Refresh shows **—**). Click a count to open **Overview** and scroll to **Data flow**. Adhoc and realtime **Refresh** appear here.
 - **Graph warnings** (if any) collapse in an amber banner above the tabs.
 
 **Tabs**
 
-- **Overview** — Identity (created/updated by, schema/table or Looker/Sheet fields, last updated, scope tags), then **Data flow** (direct **Source tables** and **Target tables**). For **jobs**, lists configured source and target tables. For **tables**, **Google Sheet**, and **Looker Studio**, shows tables one data job away, with a **via job** line on each row when applicable. Unresolved table refs are muted, “not in chart”, and not clickable. Then Links (**Job ID** with copy for jobs), Resources and Schedule when they apply. Owner and Refresh are only in the summary strip, not repeated here.
-- **Lineage** — **Job relationships only** (e.g. prerequisite and dependent jobs for jobs; produced-by and feeds jobs for tables/sheets/Looker). Click a row to select and focus that node. No full transitive upstream/downstream node lists.
-- **Notes** — Business purpose, failure impact, and notes (tab label dims when all empty).
+- **Overview** — Identity (created and updated by, schema/table or Looker/Sheet fields, last updated, scope tags), then **Data flow** (direct **Source tables** and **Target tables**). For **jobs**, this lists the configured source and target tables. For **tables**, **Google Sheet**, and **Looker Studio**, it shows tables one data job away, with a **via job** line when that applies. Unresolved table refs are muted, say “not in chart”, and are not clickable. Then Links (**Job ID** with copy for jobs), Resources, and Schedule when they apply. Owner and Refresh stay in the summary strip.
+- **Lineage** — **Job relationships only** (prerequisite and dependent jobs for jobs; produced-by and feeds jobs for tables, sheets, and Looker). Click a row to select that node. There is no full transitive upstream/downstream list on this tab.
+- **Notes** — Business purpose, failure impact, and notes. The tab label dims when all of those are empty.
 
-**Empty fields:** Link, Scopes, Owner, Refresh, and Depends on (for dependent jobs) always show **—** when blank; most other empty fields are hidden. Empty Lineage/Notes tabs show short placeholder messages.
+**Empty fields:** Link, Scopes, Owner, Refresh, and Depends on (for dependent jobs) show **—** when blank. Most other empty fields are hidden. Empty Lineage and Notes tabs show a short placeholder.
 
 **Schedule display rules** (in Overview unless noted):
 
-- Timed → human schedule + cron
-- Dependent → **Depends on** only (no redundant Schedule/Cron rows)
+- Timed → human schedule and cron
+- Dependent → **Depends on** only
 - Adhoc / realtime → frequency in the **Refresh** summary strip only
 
 ### Use the Table registry
 
 1. Open **Table** (`/?view=table`).
-2. Pick a **mode** (one per node type):
+2. Pick a **mode** (one per node type): Tables, Jobs, Google Sheets, Looker Studio.
+3. Search the row’s own fields (name, owner, purpose, schema and table labels, links, CML job id, notes, frequency). Reference columns such as source tables are for filters, not for the search box.
+4. Add **filters** and **sorts**. Click a sortable header to cycle ascending, descending, and off. A number on the header is the multi-sort order.
+5. **Scope** sits after Name: membership chips for tags saved on that node. An empty cell can still appear in a named lens because the node is upstream of a tagged seed. The filter matches if any selected scope is on the row.
+6. Click a row to open the detail sidebar. Click the same row again to close it.
+7. **Export** downloads the current filtered and sorted rows for the active mode. The main button is CSV. The chevron also offers XLSX.
+8. From the sidebar, **View chart** selects that node on Chart and pans to it. It does not turn Focus on.
 
-   - Tables  
-   - Jobs  
-   - Google Sheets  
-   - Looker Studio  
+When the workspace has at least one scope, Editors see row checkboxes on **All** and on a named lens. Select rows, then use the chip bar: a solid chip means every selected row has that scope, an empty chip means none, a mixed chip means some. Click an off chip to add that scope. Click a solid or mixed chip to remove only that scope. Other tags stay. This stages a draft until **Save draft**. Viewers see the Scope column and no checkboxes. Changing mode clears the selection.
 
-3. Use mode-aware **search**, then add **filters** (operators such as `is`, `contains`, `is_empty`, …) and **sorts** (header shortcuts or sort builder).
-4. Click a row to open the right sidebar (Detail / Edit on wide screens).
-5. From the sidebar, jump to **Chart** focused on that node when you need the graph.
-6. **Export** CSV or XLSX  -  downloads the **current filtered/sorted** rows for the active mode only.
+<p class="shot-pending">Screenshot pending — assets/table-mode-filters.png: Table mode picker, search, and filters</p>
 
-Empty mode and “no results for filters” messages are separate; clear filters if the list looks wrong.
+<p class="shot-pending">Screenshot pending — assets/table-scope-bulk.png: Scope column and bulk scope chips</p>
 
-<p class="shot-pending">Screenshot pending — assets/table-mode-filters.png: Table mode picker with filters</p>
+<p class="shot-pending">Screenshot pending — assets/table-export.png: Export menu with CSV and XLSX</p>
 
-<p class="shot-pending">Screenshot pending — assets/table-export.png: CSV / XLSX export control</p>
+Empty mode and “no results for filters” are different messages. Clear filters if the list looks wrong. A scope with no tagged seeds shows an empty state and a way back to **All**.
 
 ### Open Monitor for a job (Editor+)
 
-On job-type nodes in the Chart/Table sidebar:
+On job nodes in the Chart or Table sidebar:
 
-1. Use the **Monitor** split control.
-2. Primary action → Monitor **Timeline** with that job focused (row scroll/highlight).
-3. Chevron menu → Monitor **Table** with the job filter set.
+1. Use the **Monitor** split.
+2. The primary action opens Monitor **Timeline** with that job’s name highlighted, when the job has reported at least once.
+3. The chevron opens Monitor **Table** with the job filter set.
 
-This clears Chart `node` selection params in favor of Monitor `job` + `monitorView` ([README deep links](README.md#deep-link-cheat-sheet)).
+This uses Monitor `job` and `monitorView`. It does not leave a Chart `?node=` Focus link behind.
 
-<p class="shot-pending">Screenshot pending — assets/editor-monitor-split.png: Monitor split control on a job node (Timeline / Table)</p>
-
-Viewers do not edit; they still use Detail, Chart navigation, and Table export.
+<p class="shot-pending">Screenshot pending — assets/editor-monitor-split.png: Monitor split on a job node (Timeline and Table)</p>
 
 ## Form / field standards
 
 | Area | Standard |
 |------|----------|
-| Table filters | Prefer precise `is` for enums (owner, frequency); `contains` for free text |
-| Export | Always check filters before download  -  export matches what you see |
-| Detail vs Edit | Viewers: Detail only. Editors: change fields in Edit, then **Save draft** ([05](05-editor-draft-and-history.md)) |
-| Full form field rules | [06  -  Node forms](06-editor-node-forms.md), [08  -  Schedule](08-editor-schedule-standards.md) |
+| Table filters | Use `is` for a single owner or frequency. Use `contains` for free text. |
+| Export | Check filters first. Export matches the rows on screen. |
+| Detail vs form | Viewers stay on Detail. Editors change fields in the form window, **Apply**, then **Save draft** ([05](05-editor-draft-and-history.md)). |
+| Scope | Tags are a lens, not a permission. Bulk chips and the form **Scopes** field publish on Save. |
+
+Field rules: [06 - Node forms](06-editor-node-forms.md) and [08 - Schedule](08-editor-schedule-standards.md).
 
 ## Edge cases
 
-- **No results** after filters → clear filters or switch mode.
-- **Graph warnings** after bad edges → Editor must repair links/edges.
-- Deep link `?node=<id>` selects that node on Chart/Table.
-- Chart node type labels are Title Case; silhouettes use per-type chrome (storage / courier / destination) with a four-type legend on the canvas toolbar.
+- **No results** after filters — clear filters or switch mode.
+- **Graph warnings** — an Editor repairs Source, Target, or Depends on.
+- `?node=<id>` opens Chart **Focus** on that node. It does not mean “select this row on Table”.
+- Focus plus a named scope shows the overlap of the two cones. A jump to a node outside the scope switches that jump to **All**.
+- Chart type colors are Table, Job, Google Sheet, and Looker. The legend is a color swatch plus the type name.
 
 ## Related
 
 - [03 - Monitor](03-monitor.md)
-- [05  -  Draft and History](05-editor-draft-and-history.md)
-- [06  -  Node forms](06-editor-node-forms.md)
-- [07  -  Edges and lineage](07-editor-edges-and-lineage.md)
-- [12  -  Standards](12-standards-and-use-cases.md)
-
+- [05 - Draft and History](05-editor-draft-and-history.md)
+- [06 - Node forms](06-editor-node-forms.md)
+- [07 - Edges and lineage](07-editor-edges-and-lineage.md)
+- [12 - Standards](12-standards-and-use-cases.md)

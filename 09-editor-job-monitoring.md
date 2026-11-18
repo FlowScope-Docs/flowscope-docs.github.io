@@ -90,11 +90,11 @@ Example START:
 
 ### Verify in Monitor
 
-1. Open Monitor table  -  the run should show the **lineage job name**, not only the CML id.
-2. Open Overview  -  status, times (WIB), Engine ID / Open runtime when provided.
-3. Open Events  -  ordered lifecycle cards.
-4. Open Timeline  -  expected slot should link when schedule matching succeeds.
-5. If unmapped → fix `link`, save again, wait for the next run (or check filters).
+1. Open the Monitor table on **All**. The run should show the **lineage job name**, not only the CML id.
+2. Open Overview. Check status, WIB times, and any warning or failed lines. The header shows **engine id** and **Open runtime** when START sent `engine_id`. **Open job page** opens the Livyatan job.
+3. Open Events. The lifecycle is a filtered row list (START, STEP, INFO, WARNING, FINISHED, FAILED).
+4. Open Timeline after the job has reported at least once. A timed job can show an expected slot when the run matches (±30 minutes). Dependent, adhoc, and realtime jobs show the real run only.
+5. If the row says **No lineage link**, fix `link`, save again, and wait for the next run. A named Scope hides unmapped rows — switch to **All** while you check.
 
 ---
 
@@ -109,7 +109,7 @@ Example START:
 | `timestamp` | Always | ISO 8601 **UTC** |
 | `step` / `message` | Recommended | Human triage |
 | `engine_id` | Recommended on START | Enables Open runtime |
-| `duration_ms` | Terminal | Duration |
+| `duration_ms` | Terminal | Whole-job duration. A STEP Load loop duration stays on that event, not on the execution row while the job is running. |
 | `row_count` | Success terminal | Rows processed |
 | `error_message` | Failure | Before re-raise |
 

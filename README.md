@@ -16,7 +16,7 @@ FlowScope helps you answer what feeds what, who owns a job, when a run was expec
   <div class="role-card">
     <span class="role-tag">Viewer</span>
     <h3>Read Monitor &amp; lineage</h3>
-    <p>Use Monitor, Chart, and Table. No edit, History, acknowledge, or Admin.</p>
+    <p>Use Monitor, Chart, and Table, including the scope lens, Chart Focus, and export. No edit, History, acknowledge, or Admin.</p>
     <ol>
       <li><a href="#/00-what-is-flowscope">What is FlowScope</a></li>
       <li><a href="#/01-getting-started">Getting started</a></li>
@@ -30,7 +30,7 @@ FlowScope helps you answer what feeds what, who owns a job, when a run was expec
   <div class="role-card">
     <span class="role-tag">Editor</span>
     <h3>Author jobs &amp; lineage</h3>
-    <p>Everything a Viewer can do, plus draft/save, History, acknowledge, and CML Telegram instrumentation.</p>
+    <p>Everything a Viewer can do, plus the form window, Save draft, History, acknowledge, scope tags, and CML Telegram instrumentation.</p>
     <ol>
       <li>Viewer path first</li>
       <li><a href="#/05-editor-draft-and-history">Draft and History</a></li>
@@ -43,7 +43,7 @@ FlowScope helps you answer what feeds what, who owns a job, when a run was expec
   <div class="role-card">
     <span class="role-tag">Admin / Superadmin</span>
     <h3>Manage access</h3>
-    <p>Everything an Editor can do, plus invite users, approve requests, and set roles.</p>
+    <p>Everything an Editor can do, plus invite users, approve requests, set roles, and manage scopes.</p>
     <ol>
       <li>Editor path first</li>
       <li><a href="#/11-admin">Admin</a></li>

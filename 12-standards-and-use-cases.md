@@ -29,7 +29,7 @@ Viewers follow playbooks for triage. Editors enforce form and monitoring standar
 | Job Monitor mapping | Livyatan `link` must end with `/jobs/{id}`; save the graph ([09](09-editor-job-monitoring.md)) |
 | Schedule times | WIB; multi run-times ≥ 60 minutes apart ([08](08-editor-schedule-standards.md)) |
 | Acknowledge | Last resort after checking Events / Livyatan / helper; prefer fixing instrumentation ([10](10-editor-acknowledge.md)) |
-| Drafts | Save before leaving; restore via History if a bad save shipped ([05](05-editor-draft-and-history.md)) |
+| Drafts | Apply stages locally. Save draft and Confirm publish. History restore rolls the graph back and leaves scope tags as they are ([05](05-editor-draft-and-history.md)) |
 
 If a team habit conflicts with the UI (e.g. “infer run-after from data edges”), **the product behaviour wins**.
 
@@ -57,27 +57,27 @@ Replace the italics with your team’s answers. Leave the **Team standard (TBD)*
 
 ### Playbook: Job failed
 
-1. Open Monitor table; filter status **failed** or search the job name.
-2. Open the execution → Overview (error snippet, times) and **Events** (which step failed).
-3. If Engine ID is present, **Open runtime** on Livyatan.
-4. **Open lineage** to see downstream impact on Chart.
+1. Open the Monitor table. Turn on status **Failed**, or search the job name. Use **Warning** when the run succeeded and still reported a warning.
+2. Open the execution. Overview lists warning and failed lines. **Events** shows which step failed.
+3. When the header shows an engine id, use **Open runtime**. **Open job page** opens the Livyatan job.
+4. **Open lineage** to read impact on Chart. **Focus** limits the canvas to upstream plus one hop downstream ([04](04-chart-and-table.md)).
 5. Fix the job / data; ensure the next run sends FINISHED or FAILED ([09](09-editor-job-monitoring.md)).
 6. Escalate per team TBD contact if needed.
 
 ### Playbook: Missed run
 
-1. Open Timeline Live/History; find the **missed** bar.
-2. Confirm the job schedule in Edit is correct (frequency, WIB times, Depends on).
+1. Open Timeline and find the **missed** bar on a timed job. Dependent jobs do not draw expected slots ([08](08-editor-schedule-standards.md)).
+2. Open the job form and check frequency, WIB run times, and Depends on.
 3. Check whether CML ran outside the match window or never ran.
-4. If the miss is accepted (skip / known outage), Editor **acknowledges** with an optional reason ([10](10-editor-acknowledge.md)).
-5. If the schedule was wrong, fix and Save; do not only acknowledge forever.
+4. If the miss is accepted (skip or a known outage), an Editor **acknowledges** it with an optional reason ([10](10-editor-acknowledge.md)).
+5. If the schedule was wrong, fix it and Save. Acknowledging the same bad schedule on every cycle leaves the next day wrong too.
 
 ### Playbook: Unmapped run (“No lineage link”)
 
-1. Note the CML job id on the Monitor row.
-2. Find or create the job node; set **link** to the Livyatan URL ending in `/jobs/{that id}`.
-3. **Save draft**.
-4. Confirm the next (or current) run shows the lineage name. Past rows may still show the old label until refreshed/remapped in practice  -  verify with a new event if unsure.
+1. On Monitor, set Scope to **All** so unmapped rows are visible. Note the CML job id.
+2. Find or create the job node. Set **link** to the Livyatan URL ending in `/jobs/{that id}`.
+3. **Apply**, then **Save draft** and confirm.
+4. Confirm the next run shows the lineage name. Verify with a new event if an older row still shows the CML id.
 
 ### Playbook: Stuck running
 
@@ -89,17 +89,17 @@ Replace the italics with your team’s answers. Leave the **Team standard (TBD)*
 
 ### Playbook: Wrong schedule bars
 
-1. Compare node Schedule (frequency, run times, dependent prerequisite) to Timeline expected bars.
-2. Remember: dependent expecteds follow **master schedule slots**, not late adhoc master runs ([08](08-editor-schedule-standards.md)).
-3. Zoom in if bars are aggregated ([03](03-monitor.md)).
-4. Fix form + Save; reload Timeline.
+1. Compare the job’s Schedule (frequency, WIB run times, Depends on) with the timeline.
+2. Timed jobs show expected and missed bars. Dependent, adhoc, and realtime jobs show real runs only ([08](08-editor-schedule-standards.md)).
+3. Zoom in when bars are aggregated ([03](03-monitor.md)).
+4. Fix the form, Apply, and Save. Reload the timeline. New expected slots fill from today forward, not backward over older days in the picker.
 
 ### Playbook: Impact / lineage
 
-1. Open Chart; select the failed or critical node.
-2. Read upstream (what feeds it) and downstream (what it feeds).
-3. Use Table export if you need a filtered list for stakeholders ([04](04-chart-and-table.md)).
-4. Notify owners per team TBD ownership map.
+1. Open Chart and select the failed or critical node.
+2. Read **Data flow** on Overview (direct source and target tables) and **Lineage** (job relationships). **Focus** keeps upstream and one hop of data downstream on the canvas.
+3. Export the filtered Table when stakeholders need a list ([04](04-chart-and-table.md)).
+4. Notify owners per the team TBD ownership map.
 
 ---
 
